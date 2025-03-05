@@ -11,9 +11,9 @@ Rupiah Banknote Authenticity Detector is a project that integrates machine learn
 ### Application Demo:
 https://youtu.be/4KxXdnXJpFA
 
-## Spesifikasi Lingkungan Pengembangan
+## Development Environment Specifications
 
-### 1. Lingkungan Model
+### 1. Modeling Environment
 - **Python Version**: 3.10.13
 - **Numpy**: 1.26.4
 - **Pandas**: 2.2.2
@@ -23,10 +23,10 @@ https://youtu.be/4KxXdnXJpFA
 - **Scikit-learn**: 1.2.2
 - **Optuna**: 3.6.1
 
-### 2. Spesifikasi Notebook
-- **Nama Akselerator**: Tesla P100-PCIE-16GB
+### 2. Computing Specifications
+- **Accelerator Name**: Tesla P100-PCIE-16GB
 - **Versi CUDA**: 12.2
-- **Kapasitas Tenaga**: 250 W
+- **Power Capacity**: 250 W
 - **RAM Sistem**: 62.8 GB
 - **RAM GPU**: 16,384 MiB
 - **Kapasitas Penyimpanan**: 201.2 GB
