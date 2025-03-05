@@ -8,10 +8,10 @@
 
 Rupiah Banknote Authenticity Detector is a project that integrates machine learning with a mobile application to verify the authenticity of Rupiah banknotes. This project utilizes a Deep Learning-based image detection model, trained through fine-tuning on a pre-trained model, to determine whether a banknote is genuine or counterfeit. The model is developed and trained using the High-API Framework TensorFlow Keras, while the user interface is built using the cross-platform Flutter framework.
 
-### Application Demo:
+### 📱 Application Demo:
 https://youtu.be/4KxXdnXJpFA
 
-## Development Environment Specifications
+## 💻 Development Environment Specifications
 
 ### 1. Modeling Environment
 - **Python Version**: 3.10.13
@@ -50,4 +50,5 @@ dev_dependencies:
 ```
 
 ## 🎯 Business Understanding
+
 
