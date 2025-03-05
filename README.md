@@ -27,9 +27,9 @@ https://youtu.be/4KxXdnXJpFA
 - **Accelerator Name**: Tesla P100-PCIE-16GB
 - **Versi CUDA**: 12.2
 - **Power Capacity**: 250 W
-- **RAM Sistem**: 62.8 GB
-- **RAM GPU**: 16,384 MiB
-- **Kapasitas Penyimpanan**: 201.2 GB
+- **System RAM**: 62.8 GB
+- **GPU RAM**: 16,384 MiB
+- **Storage Capacity**: 201.2 GB
 
 ## Aplikasi Mobile (Flutter)
 
