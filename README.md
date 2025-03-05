@@ -31,17 +31,8 @@ https://youtu.be/4KxXdnXJpFA
 - **GPU RAM**: 16,384 MiB
 - **Storage Capacity**: 201.2 GB
 
-## Aplikasi Mobile (Flutter)
-
-### Deskripsi Proyek
-Aplikasi Flutter ini berfungsi sebagai antarmuka untuk mendeteksi keaslian uang Rupiah menggunakan model TensorFlow yang telah dilatih. Dengan memanfaatkan kamera perangkat, aplikasi dapat mengambil gambar uang Rupiah dan memberikan hasil deteksi mengenai keasliannya.
-
-### Struktur Proyek Flutter
-- **Nama Proyek**: `real_fake_rupiah`
-
-### Flutter Dependencies
-Proyek ini menggunakan beberapa dependencies Flutter untuk menangani fungsionalitas kamera, model TensorFlow Lite, serta audio dan logging:
-
+### 3. Flutter Dependencies
+This project uses several Flutter dependencies to handle camera functionality, TensorFlow Lite models, audio, and logging:
 ```yaml
 dependencies:
   flutter:
@@ -56,3 +47,4 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+```
