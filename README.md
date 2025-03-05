@@ -33,7 +33,7 @@ https://youtu.be/4KxXdnXJpFA
 
 ### 3. Flutter Dependencies
 This project uses several Flutter dependencies to handle camera functionality, TensorFlow Lite models, audio, and logging:
-```yaml
+```
 dependencies:
   flutter:
     sdk: flutter
