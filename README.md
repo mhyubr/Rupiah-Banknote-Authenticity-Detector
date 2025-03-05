@@ -48,3 +48,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^3.0.0
 ```
+
+## Development Environment Specifications
+
+
