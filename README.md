@@ -51,4 +51,6 @@ dev_dependencies:
 
 ## 🎯 Business Understanding
 
+## 🏗 Data Preparation
 
+## 📝 Evaluation & Analysis
