@@ -91,6 +91,7 @@ From the experiments conducted by the developer, it was found that the applicati
 <p align="center">
   <strong>Gap Analysis</strong>
 </p>
+
 | **Current State** | **Desired State** | **Action Plan** |
 |------------------|------------------|----------------|
 | SThe existing system does not have a feature to identify the authenticity of Rupiah banknotes with output in text and/or audio format | SiThe system can identify the authenticity of Rupiah banknotes with output in text and/or audio format, making it easier to understand for visually impaired individuals | MThe system can identify the authenticity of Rupiah banknotes with output in text and/or audio format, making it easier to understand for visually impaired individuals |
