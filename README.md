@@ -51,14 +51,38 @@ dev_dependencies:
 
 ## 🎯 Business Understanding
 <p align="center">
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/e269a576-cff0-43af-bf52-ec2d46a563dd"/>
+  <img height="300" alt="image" src="https://github.com/user-attachments/assets/e269a576-cff0-43af-bf52-ec2d46a563dd"/>
 </p>
 According to the 2020 population census data released by Badan Pusat Statistik, Indonesia had a population of over 270 million people (BPS, 2020). By 2024, Indonesia's population increased by 11 million, making it the fourth most populous country in the world (BPS, 2024). Among this population, approximately 22.97 million people, or about 8.51% of the total population in 2020, were classified as persons with disabilities (Kemensos, 2022). Within this category, individuals with visual impairments were the largest group, totaling approximately 3,474,035 people (Brebahama et al., 2020).
 
 <p align="center">
-  <img width="300" alt="image" src="https://github.com/user-attachments/assets/f29d698f-d792-4be7-a686-e38d518ba816"/>
+  <img height="300" alt="image" src="https://github.com/user-attachments/assets/f29d698f-d792-4be7-a686-e38d518ba816"/>
 </p>
 Data from Bank Indonesia (2022), as cited in Sadya (2022), indicates that the circulation of counterfeit currency in Indonesia reached 575,327 banknotes in 2022 (recorded from January to October 2022), as shown in Figure I.2. This number represents a 154.38% increase compared to the previous year, which recorded 260,394 counterfeit banknotes in 2021 (Bank Indonesia, 2022, as cited in Sadya, 2022). This issue requires serious attention as it may lead to future problems, particularly in ensuring transaction security for the Indonesian public. Moreover, the high circulation of counterfeit Rupiah banknotes can undermine public trust in the Rupiah currency and the national financial system.
+
+<p align="center">
+  <img height="300" alt="image" src="https://github.com/user-attachments/assets/494b1d79-d99c-4f4c-832e-b33393a6b39a"/>
+</p>
+<p align="center">
+  <img height="300" alt="image" src="https://github.com/user-attachments/assets/4e70363f-480b-45d7-affa-445ff12adb83" />
+</p>
+
+The developer conducted several experiments on the existing Rupiah banknote identification system mentioned earlier. The developer used samples of Rp50,000 and Rp100,000 banknotes from different emission years, namely 2016 and 2022. The experiments on the existing Rupiah banknote identification system were carried out using the Cash Reader application.
+
+Based on the experiments conducted, several features were found in the application, including:
+
+* Displays the banknote's denomination as text
+* Provides the banknote's denomination as audio output
+* Identifies the denomination on both sides (front and back)
+* Supports the detection of Rupiah banknotes from the 2016 and 2022 emissions
+
+From the experiments conducted by the developer, it was found that the application does not yet support the detection or identification of Rupiah banknote authenticity, either in text or audio form. Referring to these experiments, the results can be used as the basis for a gap analysis. The results of the gap analysis are presented in the following table:
+
+| **Current State** | **Desired State** | **Action Plan** |
+|------------------|------------------|----------------|
+| Sistem *existing* tidak memiliki fitur dalam mengidentifikasi keaslian uang kertas Rupiah dengan *output* dalam bentuk teks dan/atau audio | Sistem dapat mengidentifikasi keaslian uang kertas Rupiah dengan *output* dalam bentuk teks dan/atau audio sehingga dapat dengan mudah dipahami oleh difabel netra | Membuat sistem yang dapat mengidentifikasi keaslian uang kertas Rupiah dengan *output* dalam bentuk teks dan/atau audio |
+| Sistem *existing* tidak | Sistem dapat menyajikan | Membuat sistem yang |
+
 
 ## 🏗 Data Preparation
 
