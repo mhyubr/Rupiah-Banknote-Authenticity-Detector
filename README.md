@@ -58,8 +58,9 @@ According to the 2020 population census data released by Badan Pusat Statistik, 
 
 <p align="center">
   <img height="300" alt="image" src="https://github.com/user-attachments/assets/f29d698f-d792-4be7-a686-e38d518ba816"/>
-  <strong>The number of counterfeit Rupiah banknotes in circulation in Indonesia from 2016 to 2022.
-Source: Bank Indonesia (2022), in Sadya (2022).</strong>
+  <br>
+  <strong>Percentage of persons with disabilities by type</strong>
+  <strong>Source: Susenas (2020), in Bappenas (2021)</strong>
 </p>
 
 Data from Bank Indonesia (2022), as cited in Sadya (2022), indicates that the circulation of counterfeit currency in Indonesia reached 575,327 banknotes in 2022 (recorded from January to October 2022), as shown in Figure I.2. This number represents a 154.38% increase compared to the previous year, which recorded 260,394 counterfeit banknotes in 2021 (Bank Indonesia, 2022, as cited in Sadya, 2022). This issue requires serious attention as it may lead to future problems, particularly in ensuring transaction security for the Indonesian public. Moreover, the high circulation of counterfeit Rupiah banknotes can undermine public trust in the Rupiah currency and the national financial system.
@@ -67,7 +68,8 @@ Data from Bank Indonesia (2022), as cited in Sadya (2022), indicates that the ci
 <p align="center">
   <img height="300" alt="image" src="https://github.com/user-attachments/assets/494b1d79-d99c-4f4c-832e-b33393a6b39a"/>
   <br>
-  <strong>Testing the existing system using genuine Rupiah banknotes from the 2016 and 2022 emissions</strong>
+  <strong>The number of counterfeit Rupiah banknotes in circulation in Indonesia from 2016 to 2022</strong>
+  <strong>Source: Bank Indonesia (2022), in Sadya (2022)</strong>
 </p>
 <p align="center">
   <img height="300" alt="image" src="https://github.com/user-attachments/assets/4e70363f-480b-45d7-affa-445ff12adb83" />
