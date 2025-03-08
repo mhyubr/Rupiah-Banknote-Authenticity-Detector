@@ -131,4 +131,26 @@ The collection of authentic and counterfeit Rupiah banknote images with various 
 
 The developer also incorporated various real-world conditions beyond image augmentation that visually impaired individuals might encounter when detecting the authenticity of Rupiah banknotes. These conditions could pose challenges for visually impaired users in the identification process. Such conditions include crumpled banknotes, marked or scribbled notes, and certain factors that may go unnoticed by visually impaired individuals, such as tilted or 180° rotated banknotes.
 
+### Data Labeling
+
+<p align="center">
+  <img width="284" alt="image" src="https://github.com/user-attachments/assets/433fa5e3-5233-4327-96ee-ea01656dd495" />
+  <br>
+  <strong>Image data labeling</strong>
+</p>
+In image data processing, data labeling is the process of assigning labels or categories to each image in the dataset before using it to train a model. In this study, the chosen image labeling method is folder-based labeling, selected for its ease of implementation and compatibility with widely used training libraries such as TensorFlow and PyTorch. The labeling process involves dividing the dataset into two main parts: train and test. Each part contains two subfolders: asli (genuine), which holds images of authentic banknotes, and palsu (fake), which contains images of counterfeit banknotes.
+
+### Data Splitting
+
+<p align="center">
+  <img width="267" alt="image" src="https://github.com/user-attachments/assets/a2bce6cf-de6f-4f1e-a730-eb4c65d2a091" />
+  <br>
+  <strong>Single train-test split with an external testing set</strong>
+  <strong>Source (Mathai et al., 2020)</strong>
+</p>
+
+This development adopts the data splitting technique with a single train-test split scheme complemented by an external testing set. This scheme is applied to separate the evaluation conducted during model development (internal evaluation) from the final evaluation when the model is ready for deployment (external evaluation).
+
+The primary reason for choosing this scheme is that internal validation, in this case using validation data, is insufficient to determine the predictive performance of the model under development. Therefore, external evaluation is required using testing data, which is independent and not involved during the model development process (Baumann, D & Baumann, K, 2014, as cited in Mathai et al., 2020).
+
 ## 📝 Evaluation & Analysis
