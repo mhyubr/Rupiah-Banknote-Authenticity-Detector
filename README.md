@@ -49,6 +49,7 @@ dev_dependencies:
 ```
 
 ## 🎯 Business Understanding
+
 <p align="center">
   <img height="300" alt="image" src="https://github.com/user-attachments/assets/e269a576-cff0-43af-bf52-ec2d46a563dd"/>
   <br>
@@ -98,5 +99,20 @@ From the experiments conducted by the developer, it was found that the applicati
 | SThe existing system does not provide confidence probability in the detection process | The system can present confidence probability that measures the uncertainty of prediction results, both in text and audio format, providing more information for visually impaired individuals in using Rupiah banknotes | MDevelop a system that can display confidence probability in the identification process of Rupiah banknotes in text and/or audio format |
 
 ## 🏗 Data Preparation
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/8ce94436-b929-4e92-861f-d1c5eee724a3" />
+  <br>
+  <strong>Authentic Rupiah banknotes issued in 2016 and 2022</strong>
+</p>
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/9db4c5ce-faea-4db2-bb3f-4b330105abfd" />
+  <br>
+  <strong>Counterfeit Rupiah banknotes issued in 2016 and 2022</strong>
+</p>
+
+The data used in this study consists of unstructured data in the form of images of Rupiah banknotes issued in 2016 and 2022, with denominations of Rp10,000, Rp20,000, Rp50,000, and Rp100,000. The collected images were obtained from various sources and reflect real-world conditions during image acquisition. These conditions include banknotes in normal condition, crumpled, with scribbles, different background variations, and varying lighting intensities.
+
+
 
 ## 📝 Evaluation & Analysis
