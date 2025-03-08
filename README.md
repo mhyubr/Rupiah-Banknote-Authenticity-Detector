@@ -80,8 +80,8 @@ From the experiments conducted by the developer, it was found that the applicati
 
 | **Current State** | **Desired State** | **Action Plan** |
 |------------------|------------------|----------------|
-| Sistem *existing* tidak memiliki fitur dalam mengidentifikasi keaslian uang kertas Rupiah dengan *output* dalam bentuk teks dan/atau audio | Sistem dapat mengidentifikasi keaslian uang kertas Rupiah dengan *output* dalam bentuk teks dan/atau audio sehingga dapat dengan mudah dipahami oleh difabel netra | Membuat sistem yang dapat mengidentifikasi keaslian uang kertas Rupiah dengan *output* dalam bentuk teks dan/atau audio |
-| Sistem *existing* tidak | Sistem dapat menyajikan | Membuat sistem yang |
+| SThe existing system does not have a feature to identify the authenticity of Rupiah banknotes with output in text and/or audio format | SiThe system can identify the authenticity of Rupiah banknotes with output in text and/or audio format, making it easier to understand for visually impaired individuals | MThe system can identify the authenticity of Rupiah banknotes with output in text and/or audio format, making it easier to understand for visually impaired individuals |
+| SThe existing system does not provide confidence probability in the detection process | The system can present confidence probability that measures the uncertainty of prediction results, both in text and audio format, providing more information for visually impaired individuals in using Rupiah banknotes | MDevelop a system that can display confidence probability in the identification process of Rupiah banknotes in text and/or audio format |
 
 
 ## 🏗 Data Preparation
