@@ -127,4 +127,6 @@ The collection of authentic and counterfeit Rupiah banknote images with various 
   <strong>Rupiah banknotes in various conditions</strong>
 </p>
 
+The developer also incorporated various real-world conditions beyond image augmentation that visually impaired individuals might encounter when detecting the authenticity of Rupiah banknotes. These conditions could pose challenges for visually impaired users in the identification process. Such conditions include crumpled banknotes, marked or scribbled notes, and certain factors that may go unnoticed by visually impaired individuals, such as tilted or 180° rotated banknotes.
+
 ## 📝 Evaluation & Analysis
