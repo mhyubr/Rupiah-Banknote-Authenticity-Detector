@@ -153,4 +153,22 @@ This development adopts the data splitting technique with a single train-test sp
 
 The primary reason for choosing this scheme is that internal validation, in this case using validation data, is insufficient to determine the predictive performance of the model under development. Therefore, external evaluation is required using testing data, which is independent and not involved during the model development process (Baumann, D & Baumann, K, 2014, as cited in Mathai et al., 2020).
 
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/51a31eea-2243-4dd1-a96e-e7031d98470b" />
+  <br>
+  <strong>Data splitting</strong>
+</p>
+
+In this development, the data split ratio between the training dataset and the testing dataset is 80:20. A total of 80% of the data is allocated for training and validation, which is further divided using a 80:20 or 70:30 ratio, with the selection determined through a hyperparameter tuning process.
+
+From the total dataset, 80% accounts for 870 images, while the remaining 20% is used for model testing, consisting of 218 images.
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/617887cc-4a0c-4f1b-9b0c-a664828c03cd" />
+  <br>
+  <strong>Data splitting is performed based on class labels</strong>
+</p>
+
+Based on the data split results, 708 images of genuine banknotes and 162 images of counterfeit banknotes are used for model training and validation. Meanwhile, 165 images of genuine banknotes and 53 images of counterfeit banknotes are used for model testing.
+
 ## 📝 Evaluation & Analysis
