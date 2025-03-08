@@ -62,12 +62,12 @@ Data from Bank Indonesia (2022), as cited in Sadya (2022), indicates that the ci
 
 <p align="center">
   <img height="300" alt="image" src="https://github.com/user-attachments/assets/494b1d79-d99c-4f4c-832e-b33393a6b39a"/>
+  <strong>Testing the existing system using genuine Rupiah banknotes from the 2016 and 2022 emissions</strong>
 </p>
 <p align="center">
   <img height="300" alt="image" src="https://github.com/user-attachments/assets/4e70363f-480b-45d7-affa-445ff12adb83" />
+  <strong>Testing the existing system using genuine Rupiah banknotes from the 2016 and 2022 emissions</strong>
 </p>
-<br>
-<strong>Hello World</strong>
 
 The developer conducted several experiments on the existing Rupiah banknote identification system mentioned earlier. The developer used samples of Rp50,000 and Rp100,000 banknotes from different emission years, namely 2016 and 2022. The experiments on the existing Rupiah banknote identification system were carried out using the Cash Reader application.
 
