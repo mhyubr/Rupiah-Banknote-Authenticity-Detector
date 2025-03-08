@@ -50,6 +50,9 @@ dev_dependencies:
 ```
 
 ## 🎯 Business Understanding
+<p align="center">
+<img width="598" alt="image" src="https://github.com/user-attachments/assets/e269a576-cff0-43af-bf52-ec2d46a563dd" width="150"/>
+</p>
 
 ## 🏗 Data Preparation
 
