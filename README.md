@@ -88,8 +88,9 @@ Based on the experiments conducted, several features were found in the applicati
 * Supports the detection of Rupiah banknotes from the 2016 and 2022 emissions
 
 From the experiments conducted by the developer, it was found that the application does not yet support the detection or identification of Rupiah banknote authenticity, either in text or audio form. Referring to these experiments, the results can be used as the basis for a gap analysis. The results of the gap analysis are presented in the following table:
-
-<strong>Gap Analysis</strong>
+<p align="center">
+  <strong>Gap Analysis</strong>
+</p>
 | **Current State** | **Desired State** | **Action Plan** |
 |------------------|------------------|----------------|
 | SThe existing system does not have a feature to identify the authenticity of Rupiah banknotes with output in text and/or audio format | SiThe system can identify the authenticity of Rupiah banknotes with output in text and/or audio format, making it easier to understand for visually impaired individuals | MThe system can identify the authenticity of Rupiah banknotes with output in text and/or audio format, making it easier to understand for visually impaired individuals |
