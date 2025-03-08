@@ -95,7 +95,7 @@ From the experiments conducted by the developer, it was found that the applicati
 
 | **Current State** | **Desired State** | **Action Plan** |
 |------------------|------------------|----------------|
-| SThe existing system does not have a feature to identify the authenticity of Rupiah banknotes with output in text and/or audio format | SiThe system can identify the authenticity of Rupiah banknotes with output in text and/or audio format, making it easier to understand for visually impaired individuals | MThe system can identify the authenticity of Rupiah banknotes with output in text and/or audio format, making it easier to understand for visually impaired individuals |
+| The existing system does not have a feature to identify the authenticity of Rupiah banknotes with output in text and/or audio format | SiThe system can identify the authenticity of Rupiah banknotes with output in text and/or audio format, making it easier to understand for visually impaired individuals | MThe system can identify the authenticity of Rupiah banknotes with output in text and/or audio format, making it easier to understand for visually impaired individuals |
 | SThe existing system does not provide confidence probability in the detection process | The system can present confidence probability that measures the uncertainty of prediction results, both in text and audio format, providing more information for visually impaired individuals in using Rupiah banknotes | MDevelop a system that can display confidence probability in the identification process of Rupiah banknotes in text and/or audio format |
 
 ## 🏗 Data Preparation
@@ -113,6 +113,18 @@ From the experiments conducted by the developer, it was found that the applicati
 
 The data used in this study consists of unstructured data in the form of images of Rupiah banknotes issued in 2016 and 2022, with denominations of Rp10,000, Rp20,000, Rp50,000, and Rp100,000. The collected images were obtained from various sources and reflect real-world conditions during image acquisition. These conditions include banknotes in normal condition, crumpled, with scribbles, different background variations, and varying lighting intensities.
 
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/5f62c9d4-7a8a-424d-9d6b-130b2b44c9c5" />
+  <br>
+  <strong>Comparison of Dataset Collection</strong>
+</p>
 
+The collection of authentic and counterfeit Rupiah banknote images with various denominations was conducted through direct image acquisition and sourcing from relevant external sources. The image data obtained from the developer’s photography consists of 1,002 images, comprising 793 authentic banknote images and 209 counterfeit banknote images. Additionally, the dataset collected from external sources contains 86 images, including 80 authentic banknote images and 6 counterfeit banknote images. Therefore, the total dataset used in this study consists of 1,088 Rupiah banknote images.
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/20c0ddbb-124f-4a3c-bd72-5eb1d3ac3f79" />
+  <br>
+  <strong>Rupiah banknotes in various conditions</strong>
+</p>
 
 ## 📝 Evaluation & Analysis
