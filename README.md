@@ -100,6 +100,8 @@ From the experiments conducted by the developer, it was found that the applicati
 
 ## 🏗 Data Preparation
 
+### Data collection
+
 <p align="center">
   <img width="300" alt="image" src="https://github.com/user-attachments/assets/8ce94436-b929-4e92-861f-d1c5eee724a3" />
   <br>
