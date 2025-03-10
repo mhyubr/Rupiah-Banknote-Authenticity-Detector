@@ -171,4 +171,39 @@ From the total dataset, 80% accounts for 870 images, while the remaining 20% is 
 
 Based on the data split results, 708 images of genuine banknotes and 162 images of counterfeit banknotes are used for model training and validation. Meanwhile, 165 images of genuine banknotes and 53 images of counterfeit banknotes are used for model testing.
 
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/3e9b822c-acf6-4fcb-bebd-ef3a1bdf2a02" />
+  <br>
+  <strong>Train Dataset</strong>
+</p>
+
+The training dataset comes from the train directory, which is then split into training and validation data with a ratio of 70:30 or 80:20, used for model testing simulations with hyperparameter tuning. The training dataset consists of images that have undergone the cropping process, making up 70% or 80% of the train directory.
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/73e425a6-50cd-41cf-9dc0-1cedb44c75ff" />
+  <br>
+  <strong>Validation Dataset</strong>
+</p>
+
+The validation dataset comes from the train directory, which has been split at a 70:30 or 80:20 ratio for training and validation purposes. The validation dataset consists of images that have undergone the cropping process, making up 30% or 20% of the train directory. No image augmentation is applied to the validation dataset to preserve the authenticity of the images, ensuring consistent and accurate validation of the model’s performance on unseen data. Additionally, the validation dataset is used to evaluate the model during training to aid in model selection and hyperparameter tuning.
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/4371194f-76a9-4c48-bba2-11651e956977" />
+  <br>
+  <strong>Test Dataset</strong>
+</p>
+
+The testing dataset comes from the test directory, comprising 20% of the total dataset. The testing dataset does not undergo image cropping or image augmentation to maintain the authenticity of the images, ensuring that it reflects real-world conditions when determining the authenticity of banknotes for visually impaired individuals. The images in the testing dataset are expected to represent actual conditions that visually impaired individuals may encounter when identifying the authenticity of Rupiah banknotes from the 2016 and 2022 emissions.
+
+## Data Preprocessing
+
+After collecting and labeling the Rupiah banknote image data, the developer proceeds with data preprocessing to ensure the images are ready for the modeling stage.
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/17b56e5c-3c20-49c1-88f8-602003859e44" />
+  <br>
+  <strong>Test Dataset</strong>
+</p>
+
+
 ## 📝 Evaluation & Analysis
