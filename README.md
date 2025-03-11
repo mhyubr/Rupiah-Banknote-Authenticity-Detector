@@ -1,4 +1,4 @@
-# Rupiah-Banknote-Authenticity-Detector
+![image](https://github.com/user-attachments/assets/3f69cbea-166b-4b09-831b-74513e0d218a)# Rupiah-Banknote-Authenticity-Detector
 
 <p align="center">
   <img src="real_fake_rupiah/assets/images/Mockup%20Start%20App.png" alt="Screenshot 1" width="150"/>
@@ -432,5 +432,23 @@ The verbose parameter was set to 1, meaning that detailed log outputs would be g
 In this development, Model Checkpoint was implemented to store the best-performing model during training based on specific criteria, in this case, validation loss. The Model Checkpoint mechanism automatically saves a copy of the model at a given epoch whenever an improvement in performance is detected. This ensures that the best model is preserved after training is completed or if training is prematurely stopped by early stopping.
 
 By utilizing Model Checkpoint, developers can ensure that the final model used for evaluation and deployment is the most optimal version obtained throughout the training process. The complete configuration parameters for the Model Checkpoint callback are summarized in the following table.
+
+<p align="center">
+  <img width="598" alt="image" src="https://github.com/user-attachments/assets/8fa6e2c4-d69f-49bb-a481-9ace488eb292" />
+  <br>
+  <strong>Checkpoint model parameter configuration</strong>
+</p>
+
+The table outlines the configuration parameters for using the Model Checkpoint callback during model training.
+
+- The filepath parameter specifies the directory or filename where the best-performing model will be saved. The naming convention is adjusted based on the model being trained. By setting a specific filepath that aligns with the model name, developers can ensure that the best-performing model version is stored with a relevant and easily identifiable name for further evaluation or deployment.
+
+- The monitor parameter is set to validation loss, meaning the Model Checkpoint will track validation loss during training. Whenever validation loss improves (i.e., decreases), the newly trained model is saved. This is crucial because validation loss indicates how well the model generalizes to unseen data. Additionally, monitoring validation loss aligns with the early stopping callback, which uses the same monitoring parameter.
+
+- The mode parameter is set to auto, allowing the Model Checkpoint to automatically select the appropriate evaluation mode based on the monitored metric. Since validation loss is being tracked, the mode will automatically switch to min, meaning that if the validation loss is lower than in previous epochs, the checkpoint will save the model for that epoch.
+
+- The save_best_only parameter is set to True, ensuring that only the best-performing model is saved. This prevents unnecessary storage of models from epochs that do not show performance improvements, optimizing storage usage and focusing on models with the highest performance.
+
+- Lastly, the verbose parameter is set to 1, meaning that the checkpoint process will provide real-time updates during training. In other words, developers will receive notifications whenever a new best-performing model is saved, allowing them to monitor progress and assess the effectiveness of the checkpointing strategy.
 
 ## 📝 Evaluation & Analysis
