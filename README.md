@@ -214,11 +214,42 @@ During the collection of Rupiah banknote images, whether through direct photogra
 <p align="center">
   <img width="580" alt="image" src="https://github.com/user-attachments/assets/a5996e43-83c4-4be1-b300-dd13fd511dc8" />
   <br>
-  <strong>Image Resizing>=</strong>
+  <strong>Image Resizing</strong>
 </p>
 
 In this development, the image resizing method is applied using sizes recommended by the pre-trained architecture while also considering findings from Lakhani (2020). The study indicates that, in most cases, an image size of 256 × 256 pixels reaches a plateau, where increasing the resolution does not significantly improve model accuracy. Additionally, the same study found that, under certain conditions, larger image sizes, such as 448 × 448 pixels to 512 × 512 pixels, perform better as features become more visible at higher resolutions, enhancing detection accuracy compared to lower resolutions. Therefore, this development utilizes image sizes of 256 × 256 pixels, 448 × 448 pixels, and 512 × 512 pixels, with the best parameter selection conducted through hyperparameter tuning.
 
-#### 
+#### Image Normalizing
+
+<p align="center">
+  <img width="580" alt="image" src="https://github.com/user-attachments/assets/c11a1a92-6f3c-454f-9cfc-52ee7c4b1a83" />
+  <br>
+  <strong>Image Normalizing</strong>
+</p>
+
+In this development, normalization is applied to the training, validation, and testing datasets using an empirical method simplified from the min-max normalization method, which can be mathematically formulated as follows.
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/b527bb84-20a7-4109-b862-055c5eec71fd" />
+  <br>
+  <strong>Min-Max Normalization</strong>
+</p>
+
+Where:
+Xnorm  = normalization result of Xi
+Xi     = data to be normalized
+min(X) = minimum value in dataset X
+max(X) = maximum value in dataset X
+
+The minimum intensity value of the image is 0, and the maximum value is 255. Therefore, the min-max normalization equation can be simplified into the following equation, resulting in an empirical method.
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/53b35c56-a2e1-4f47-ab5f-6b0227504636" />
+  <br>
+  <strong>Metode Empirical</strong>
+</p>
+
+Xnorm  = normalization result of Xi
+Xi     = data to be normalized
 
 ## 📝 Evaluation & Analysis
