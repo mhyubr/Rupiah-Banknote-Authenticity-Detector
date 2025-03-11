@@ -1,4 +1,4 @@
-# Rupiah-Banknote-Authenticity-Detector
+![image](https://github.com/user-attachments/assets/211a3eba-28da-4a35-b0e8-ca7ff692757b)# Rupiah-Banknote-Authenticity-Detector
 
 <p align="center">
   <img src="real_fake_rupiah/assets/images/Mockup%20Start%20App.png" alt="Screenshot 1" width="150"/>
@@ -267,5 +267,21 @@ Similarly, during the decoding phase, the one-hot encoding method converts the m
 </p>
 
 In the table, each class is encoded in a binary vector format, allowing machine learning algorithms to process categorical information in a numerically interpretable manner. The table presents the results of one-hot encoding for both classes or labels: genuine and counterfeit. The genuine class is represented by the binary vector [1., 0.], meaning that for data belonging to the genuine class, the first element in the vector is 1, and the second element is 0. Conversely, the counterfeit class is represented by the binary vector [0., 1.], where the first element is 0, and the second element is 1.
+
+#### Image Augmentation
+
+<p align="center">
+  <img width="364" alt="image" src="https://github.com/user-attachments/assets/100448d8-e463-413c-9af1-83b9f5b9cd39" />
+  <br>
+  <strong>Image Augmentation</strong>
+</p>
+
+Image augmentation is a process used to generate new images from existing image data to increase the diversity and quantity of data available for training a model. It is employed to enhance model performance and robustness by introducing variations in the training data. The use of image augmentation also helps the model generalize to new images that have not been seen before or during the training process.
+
+At this stage, the developer applies transformations to each training image to introduce variations and simulate different conditions of Rupiah banknotes during the training process.
+
+Therefore, to ensure the trained dataset can adapt to various conditions of Rupiah banknotes used by visually impaired individuals, five types of transformations are applied in this development, as follows:
+
+1. Hello Wolrd
 
 ## 📝 Evaluation & Analysis
