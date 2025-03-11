@@ -202,7 +202,7 @@ After collecting and labeling the Rupiah banknote image data, the developer proc
 #### Image Croping
 
 <p align="center">
-  <img width="500" alt="image" src="https://github.com/user-attachments/assets/17b56e5c-3c20-49c1-88f8-602003859e44" />
+  <img width="580" alt="image" src="https://github.com/user-attachments/assets/17b56e5c-3c20-49c1-88f8-602003859e44" />
   <br>
   <strong>Image Croping</strong>
 </p>
@@ -251,5 +251,21 @@ The minimum intensity value of the image is 0, and the maximum value is 255. The
 
 - Xnorm  = normalization result of Xi
 - Xi     = data to be normalized
+
+#### One-Hot Encoding
+
+In this development, the one-hot encoding method is used to align with the output activation function, which is softmax. The use of this method also considers research conducted by Lu (2020) in the study titled "Quasi-Orthonormal Encoding for Machine Learning Applications." This research highlights the relationship between one-hot encoding and the softmax activation function in handling categorical variables within classification models.
+
+The study explains that one-hot encoding effectively represents both input and target output in multi-class classification. The softmax function processes the model's output by converting raw values from the final neural network layer into a probability distribution. It then utilizes loss functions such as cross-entropy for model training.
+
+Similarly, during the decoding phase, the one-hot encoding method converts the model's output back into categorical form using the argmax function. The argmax function selects the index with the highest value in the output vector, while the softmax function generates a probability vector to determine the class with the highest probability.
+
+<p align="center">
+  <img width="550" alt="image" src="https://github.com/user-attachments/assets/8f209823-95f2-4dde-bba5-e12d615670b1" />
+  <br>
+  <strong>One-hot Encoding</strong>
+</p>
+
+In the table, each class is encoded in a binary vector format, allowing machine learning algorithms to process categorical information in a numerically interpretable manner. The table presents the results of one-hot encoding for both classes or labels: genuine and counterfeit. The genuine class is represented by the binary vector [1., 0.], meaning that for data belonging to the genuine class, the first element in the vector is 1, and the second element is 0. Conversely, the counterfeit class is represented by the binary vector [0., 1.], where the first element is 0, and the second element is 1.
 
 ## 📝 Evaluation & Analysis
