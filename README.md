@@ -489,9 +489,31 @@ The table above presents various training scenarios used in the grid search proc
 
 - The train-valid split determines the proportion of data allocated for training and validation. Scenarios 1 to 6 use a 70:30 split, while scenarios 8 to 12 use an 80:20 split.
 - The image size refers to the resolution of images processed during training, with values varying between 256, 448, and 512 pixels:
--- 256 pixels are used in scenarios 1, 7, and 13.
--- 448 pixels are applied in scenarios 3, 9, and 15.
--- 512 pixels are used in scenarios 5, 11, and 17.
+ - 256 pixels are used in scenarios 1, 7, and 13.
+ - 448 pixels are applied in scenarios 3, 9, and 15.
+ - 512 pixels are used in scenarios 5, 11, and 17.
+- The batch size defines the number of images processed in a single training iteration:
+ - A batch size of 32 is used in scenarios 1, 3, 5, 7, 9, and 11.
+- A batch size of 64 is applied in scenarios 2, 4, 6, 8, 10, and 12.
+
+These different parameter combinations were tested to identify the optimal configuration for the Rupiah banknote authenticity identification model, aiming to determine the settings that provide the best performance and training efficiency. Additionally, the best-performing model selected in this stage moves forward to the next phase, based on a balance between authentication performance and training time efficiency.
+
+### Training Using Image Augmentation
+
+<p align="center">
+  <img width="528" alt="image" src="https://github.com/user-attachments/assets/dc84e619-4dca-4f9e-a5d6-51ebc2bb9970" />
+  <br>
+  <strong>Optuna</strong>
+</p>
+
+This study utilizes a custom CNN architecture with a relatively complex structure, along with two pre-trained architectures, VGG-19 and EfficientNetV2B2. Complex models tend to be more prone to overfitting, making the use of image augmentation an effective strategy to mitigate this issue.
+
+As highlighted in the research by Fahim & Tumpa (2023) titled "Image Augmentation Techniques: Enhancing Deep Learning Performance", image augmentation allows for the generation of multiple variations of existing images through transformations, thereby enhancing the quality of training data. Additionally, image augmentation helps reduce overfitting and enables the model to generalize better to unseen data. This is because augmentation increases the model’s robustness to variations in object appearance, orientation, deformation, and lighting conditions, ultimately improving its overall resilience and adaptability.
+
+To evaluate its impact, this stage involves an experiment comparing the model’s performance before and after applying image augmentation in the Rupiah banknote authenticity identification task. The evaluation is conducted using performance metrics, including accuracy, F1-Macro, Precision-Macro, Recall-Macro, and ROC-AUC Score.
+
+### Hyperparameter Tuning with Optuna
+
 
 
 ## 📝 Evaluation & Analysis
