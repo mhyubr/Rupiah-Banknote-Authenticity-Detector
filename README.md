@@ -103,12 +103,12 @@ From the experiments conducted by the developer, it was found that the applicati
 ### Data collection
 
 <p align="center">
-  <img width="300" alt="image" src="https://github.com/user-attachments/assets/8ce94436-b929-4e92-861f-d1c5eee724a3" />
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/8ce94436-b929-4e92-861f-d1c5eee724a3" />
   <br>
   <strong>Authentic Rupiah banknotes issued in 2016 and 2022</strong>
 </p>
 <p align="center">
-  <img width="300" alt="image" src="https://github.com/user-attachments/assets/9db4c5ce-faea-4db2-bb3f-4b330105abfd" />
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/9db4c5ce-faea-4db2-bb3f-4b330105abfd" />
   <br>
   <strong>Counterfeit Rupiah banknotes issued in 2016 and 2022</strong>
 </p>
