@@ -451,4 +451,47 @@ The table outlines the configuration parameters for using the Model Checkpoint c
 
 - Lastly, the verbose parameter is set to 1, meaning that the checkpoint process will provide real-time updates during training. In other words, developers will receive notifications whenever a new best-performing model is saved, allowing them to monitor progress and assess the effectiveness of the checkpointing strategy.
 
+#### ReduceLROnPlateau
+
+In this development, ReduceLROnPlateau is utilized to dynamically adjust the learning rate during training based on improvements in the evaluation metric. The configuration parameters for the ReduceLROnPlateau callback are detailed in the following table.
+
+<p align="center">
+  <img width="597" alt="image" src="https://github.com/user-attachments/assets/f4240458-ee4f-46ef-b123-9a8904bdefb6" />
+  <br>
+  <strong>ReduceLROnPlateau parameter configuration</strong>
+</p>
+
+The table presents the configuration parameters used in the ReduceLROnPlateau callback for dynamically adjusting the learning rate throughout the training process.
+
+- The monitor parameter is set to validation loss, meaning that the learning rate will be reduced if no improvement is observed in validation loss. This choice aligns with the monitoring parameters used in the early stopping and model checkpoint callbacks. Additionally, validation loss is commonly used to regulate learning rates. A study by Mahesh et al. (2024) titled "Transformative Breast Cancer Diagnosis using CNNs with Optimized ReduceLROnPlateau and Early Stopping Enhancements" demonstrated that using validation loss for monitoring within a CNN architecture resulted in a classification model with 95.2% accuracy.
+
+- The factor parameter is set to 0.5, meaning that if validation loss does not improve, the learning rate will be reduced to half of its previous value. This reduction helps prevent overly aggressive training that could cause the model to overshoot the optimal point, leading to instability in performance. The selection of this decay factor is also based on research by Zaheer et al. (2018) in their study "Adaptive Methods for Nonconvex Optimization", where they experimented with different optimizers using ReduceLROnPlateau across various batch sizes. Their findings indicate that a decay factor of 0.5 performs well in most cases, even when the learning rate reduction rate is 5 to 10 times higher.
+
+- The patience parameter is set to 5, meaning that if validation loss does not improve for five consecutive epochs, the learning rate will be reduced based on the decay factor. In general, the choice of patience in ReduceLROnPlateau depends on the dataset size (Zaheer et al., 2018). Moreover, this value is chosen in relation to the early stopping patience value of 10. Using a lower patience value for ReduceLROnPlateau compared to early stopping allows the model to adjust the learning rate more quickly and provides an opportunity for the model to escape potential local minima before training is terminated.
+
+- The min_lr parameter is set to 1e-8, ensuring that the learning rate does not drop below this threshold. This prevents excessively small learning rates, which could cause training to become too slow or stagnate.
+
+- Lastly, the verbose parameter is set to 1, meaning that updates regarding learning rate adjustments will be displayed during training. This provides immediate feedback to developers, helping them analyze how frequently the learning rate changes throughout training and better understand the model's training dynamics.
+
+### Hyperparameter Optimization with Grid Search Method
+
+The model training was conducted using multiple training scenarios designed as part of the hyperparameter tuning process to select the optimal dataset parameters for Rupiah banknote authenticity identification modeling. The hyperparameter tuning process was performed manually, with the selection of the best model based on both identification performance and training time efficiency achieved across different training scenarios.
+
+The optimal parameter selection was carried out using the grid search method. Grid search helps evaluate various hyperparameter combinations to determine the configuration that delivers the best results in terms of identification performance and training efficiency. The training scenarios and parameters used in grid search are detailed in the following table.
+
+<p align="center">
+  <img width="528" alt="image" src="https://github.com/user-attachments/assets/dc84e619-4dca-4f9e-a5d6-51ebc2bb9970" />
+  <br>
+  <strong>ReduceLROnPlateau parameter configuration</strong>
+</p>
+
+The table above presents various training scenarios used in the grid search process for model hyperparameter tuning. Each scenario involves a different combination of three key parameters: train-valid split, image size, and batch size.
+
+- The train-valid split determines the proportion of data allocated for training and validation. Scenarios 1 to 6 use a 70:30 split, while scenarios 8 to 12 use an 80:20 split.
+- The image size refers to the resolution of images processed during training, with values varying between 256, 448, and 512 pixels:
+-- 256 pixels are used in scenarios 1, 7, and 13.
+-- 448 pixels are applied in scenarios 3, 9, and 15.
+-- 512 pixels are used in scenarios 5, 11, and 17.
+
+
 ## 📝 Evaluation & Analysis
