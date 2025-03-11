@@ -195,17 +195,30 @@ The validation dataset comes from the train directory, which has been split at a
 
 The testing dataset comes from the test directory, comprising 20% of the total dataset. The testing dataset does not undergo image cropping or image augmentation to maintain the authenticity of the images, ensuring that it reflects real-world conditions when determining the authenticity of banknotes for visually impaired individuals. The images in the testing dataset are expected to represent actual conditions that visually impaired individuals may encounter when identifying the authenticity of Rupiah banknotes from the 2016 and 2022 emissions.
 
-## Data Preprocessing
+### Data Preprocessing
 
 After collecting and labeling the Rupiah banknote image data, the developer proceeds with data preprocessing to ensure the images are ready for the modeling stage.
 
-### Image Croping
+#### Image Croping
 
 <p align="center">
   <img width="500" alt="image" src="https://github.com/user-attachments/assets/17b56e5c-3c20-49c1-88f8-602003859e44" />
   <br>
-  <strong>Test Dataset</strong>
+  <strong>Image Croping</strong>
 </p>
 
+During the collection of Rupiah banknote images, whether through direct photography by the developer or from other sources, various background conditions and hand images were present in some data. Therefore, to prevent the model from learning these backgrounds and hand images, which could introduce bias in model performance, the developer applied image cropping.
+
+#### Image Resizing
+
+<p align="center">
+  <img width="580" alt="image" src="https://github.com/user-attachments/assets/a5996e43-83c4-4be1-b300-dd13fd511dc8" />
+  <br>
+  <strong>Image Resizing>=</strong>
+</p>
+
+In this development, the image resizing method is applied using sizes recommended by the pre-trained architecture while also considering findings from Lakhani (2020). The study indicates that, in most cases, an image size of 256 × 256 pixels reaches a plateau, where increasing the resolution does not significantly improve model accuracy. Additionally, the same study found that, under certain conditions, larger image sizes, such as 448 × 448 pixels to 512 × 512 pixels, perform better as features become more visible at higher resolutions, enhancing detection accuracy compared to lower resolutions. Therefore, this development utilizes image sizes of 256 × 256 pixels, 448 × 448 pixels, and 512 × 512 pixels, with the best parameter selection conducted through hyperparameter tuning.
+
+#### 
 
 ## 📝 Evaluation & Analysis
