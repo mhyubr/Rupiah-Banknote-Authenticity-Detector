@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/211a3eba-28da-4a35-b0e8-ca7ff692757b)# Rupiah-Banknote-Authenticity-Detector
+![image](https://github.com/user-attachments/assets/ab738e13-1caa-4f19-a911-be4a627de9d3)![image](https://github.com/user-attachments/assets/afd68920-8c96-44d3-bb9e-4dbf6d75cac6)![image](https://github.com/user-attachments/assets/211a3eba-28da-4a35-b0e8-ca7ff692757b)# Rupiah-Banknote-Authenticity-Detector
 
 <p align="center">
   <img src="real_fake_rupiah/assets/images/Mockup%20Start%20App.png" alt="Screenshot 1" width="150"/>
@@ -290,6 +290,49 @@ Therefore, to ensure the trained dataset can adapt to various conditions of Rupi
   <strong>Adjust brightness</strong>
 </p>
 
-2. Hello
+2. Randomly rotating the image within an angle range of 0 to 315° (clockwise) or 0 to -315° (counterclockwise). The purpose of this transformation is to add variation to the training data by changing the image orientation, helping the model learn to recognize objects from different angles. Additionally, this transformation is used to prevent situations where visually impaired individuals are unaware of the angle of the banknote being identified.
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/a27d8fd8-22f2-457c-af65-948e91fb5605" />
+  <br>
+  <strong>Rotation</strong>
+</p>
+
+3. Randomly shifting the image horizontally by up to 20% of the original image width. The purpose of this transformation is to simulate changes in object positioning within the image, which may occur when visually impaired individuals identify the authenticity of Rupiah banknotes.
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/985e8327-3b98-434c-8e74-ab28cda467b5" />
+  <br>
+  <strong>Width shift</strong>
+</p>
+
+4. Randomly shifting the image vertically by up to 20% of the original image height. The purpose of this transformation is to help the model recognize objects that may be slightly shifted up or down in situations where visually impaired individuals identify the authenticity of Rupiah banknotes.
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/a985d31b-d659-44dd-b814-36006c560054" />
+  <br>
+  <strong>Height shift</strong>
+</p>
+
+5. Randomly scaling the image within a range of 0% to 25% of the original size. In this case, the image size will vary between 75% and 125% of its original dimensions. The purpose of this transformation is to help the model recognize objects from different distances, ensuring that the model can accurately identify Rupiah banknotes even when the observation distance varies.
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/d0687e1f-eb2c-43cc-ae5e-5fb5575d5df8" />
+  <br>
+  <strong>Height shift</strong>
+</p>
+
+## 🛠️ Model Preparation
+
+The models used in this development are custom CNN architectures and pre-trained architectures, namely VGG-19 and EfficientNetV2. For the EfficientNetV2 architecture, the developer selected the EfficientNetV2B2 variant based on the consideration that this development requires a model architecture with higher complexity and accuracy while still accounting for available resource constraints. The selection of the EfficientNetV2-B2 variant also considers the study by Pardede & Purohita (2023), which compares 12 types of pre-trained architectures, including eight (8) variants of EfficientNetV2: EfficientNetV2B0, EfficientNetV2B1, EfficientNetV2B2, EfficientNetV2B3, EfficientNetV2S, EfficientNetV2M, and EfficientNetV2L, ordered from the smallest to the largest variant based on parameter size (model weights). The study results indicate that the EfficientNetV2 architecture, particularly the EfficientNetV2B2 variant, consistently achieves an accuracy and F1-Score above 80%. This model has the fourth fastest training time, following MobileNetV3L, EfficientNetV2B0, and EfficientNetV2B1, with a training time of 29 minutes and 5 seconds at the 100th epoch using the fine-tuning method.
+
+The pre-trained architectures VGG-19 and EfficientNetV2B2 are used with a fully-trainable approach, meaning all layers are retrained to perform fine-tuning.
+
+<p align="center">
+  <img width="400" alt="image" src="https://github.com/user-attachments/assets/05f30162-1aae-4cbe-8253-f64c0134df8d" />
+  <br>
+  <strong>Height shift</strong>
+</p>
+
 
 ## 📝 Evaluation & Analysis
