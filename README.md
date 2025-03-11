@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/eb367275-cbda-4490-9250-22f57ff077cc)# Rupiah-Banknote-Authenticity-Detector
+![image](https://github.com/user-attachments/assets/6e8a9c66-5cb9-41b1-b7fe-9505f7776846)![image](https://github.com/user-attachments/assets/eb367275-cbda-4490-9250-22f57ff077cc)# Rupiah-Banknote-Authenticity-Detector
 
 <p align="center">
   <img src="real_fake_rupiah/assets/images/Mockup%20Start%20App.png" alt="Screenshot 1" width="150"/>
@@ -408,9 +408,26 @@ The table above outlines the training configuration applied in this development.
 
 The model training process can leverage the use of callbacks to facilitate the storage of the best-performing model, halt training when necessary, and dynamically adjust the learning rate. In this development, three types of callbacks were utilized: Early Stopping, Model Checkpoint, and ReduceLROnPlateau.
 
-### Early Stopping
+#### Early Stopping
 
+In this development, early stopping was implemented to halt the model training process if no significant improvement was observed in the specified evaluation metric. The primary goal of early stopping is to prevent overfitting and optimize training time. The configuration parameters for the early stopping callback are detailed in the following table.
 
+<p align="center">
+  <img width="598" alt="image" src="https://github.com/user-attachments/assets/8fa6e2c4-d69f-49bb-a481-9ace488eb292" />
+  <br>
+  <strong>Model training configuration</strong>
+</p>
 
+The table outlines the configuration of parameters used for the early stopping callback during model training. The monitor parameter specifies the metric to be observed throughout training to determine whether training should be stopped. Validation loss (val_loss) was chosen as the monitored metric, meaning that training would be halted if val_loss, or validation loss, failed to improve. This approach aligns with the study conducted by Li et al. (2024) in their paper, “Keeping Deep Learning Models in Check: A History-Based Approach to Mitigate Overfitting”, which emphasizes the use of validation loss curves to prevent overfitting in model training. Their research experimented with patience values ranging from 5 to 115 epochs and found that validation loss curves typically changed every 10 epochs on average. Based on these findings, the developer set the patience value to 10, allowing the model time to improve validation loss for 10 epochs before stopping the training process.
+
+Additionally, the min_delta parameter was set to 0, ensuring that even minor improvements in validation loss were recognized as progress. This configuration allows the model to escape local minima by considering even small reductions in loss, which can be significant in the long run.
+
+The verbose parameter was set to 1, meaning that detailed log outputs would be generated whenever early stopping occurred. This feature helps developers monitor and analyze the training process more effectively.
+
+#### Model Checkpoint
+
+In this development, Model Checkpoint was implemented to store the best-performing model during training based on specific criteria, in this case, validation loss. The Model Checkpoint mechanism automatically saves a copy of the model at a given epoch whenever an improvement in performance is detected. This ensures that the best model is preserved after training is completed or if training is prematurely stopped by early stopping.
+
+By utilizing Model Checkpoint, developers can ensure that the final model used for evaluation and deployment is the most optimal version obtained throughout the training process. The complete configuration parameters for the Model Checkpoint callback are summarized in the following table.
 
 ## 📝 Evaluation & Analysis
