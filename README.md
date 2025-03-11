@@ -282,6 +282,14 @@ At this stage, the developer applies transformations to each training image to i
 
 Therefore, to ensure the trained dataset can adapt to various conditions of Rupiah banknotes used by visually impaired individuals, five types of transformations are applied in this development, as follows:
 
-1. Hello Wolrd
+1. Randomly adjusting the brightness of the image by up to 25% brighter or darker. In this case, the image can have a brightness level ranging from 75% to 125% of its original brightness. The purpose of this transformation is to make the model more robust against lighting variations that visually impaired individuals may encounter when identifying the authenticity of Rupiah banknotes.
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/297d6d39-201f-4f17-b929-5c8c0a042d5b" />
+  <br>
+  <strong>Adjust brightness</strong>
+</p>
+
+2. Hello
 
 ## 📝 Evaluation & Analysis
