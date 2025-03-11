@@ -236,10 +236,10 @@ In this development, normalization is applied to the training, validation, and t
 </p>
 
 Where:
-Xnorm  = normalization result of Xi
-Xi     = data to be normalized
-min(X) = minimum value in dataset X
-max(X) = maximum value in dataset X
+- Xnorm  = normalization result of Xi
+- Xi     = data to be normalized
+- min(X) = minimum value in dataset X
+- max(X) = maximum value in dataset X
 
 The minimum intensity value of the image is 0, and the maximum value is 255. Therefore, the min-max normalization equation can be simplified into the following equation, resulting in an empirical method.
 
@@ -249,7 +249,7 @@ The minimum intensity value of the image is 0, and the maximum value is 255. The
   <strong>Metode Empirical</strong>
 </p>
 
-Xnorm  = normalization result of Xi
-Xi     = data to be normalized
+- Xnorm  = normalization result of Xi
+- Xi     = data to be normalized
 
 ## 📝 Evaluation & Analysis
