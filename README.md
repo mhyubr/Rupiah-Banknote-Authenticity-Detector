@@ -271,7 +271,7 @@ In the table, each class is encoded in a binary vector format, allowing machine 
 #### Image Augmentation
 
 <p align="center">
-  <img width="364" alt="image" src="https://github.com/user-attachments/assets/100448d8-e463-413c-9af1-83b9f5b9cd39" />
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/100448d8-e463-413c-9af1-83b9f5b9cd39" />
   <br>
   <strong>Image Augmentation</strong>
 </p>
