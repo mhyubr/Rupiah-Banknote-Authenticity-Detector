@@ -1,4 +1,4 @@
-<img width="359" alt="image" src="https://github.com/user-attachments/assets/a885630c-04af-4a54-9add-691ec9bffc2b" />![image](https://github.com/user-attachments/assets/1d98ae19-0d7d-4215-b14e-66e1ae3e0500)# Rupiah-Banknote-Authenticity-Detector
+<img width="359" alt="image" src="https://github.com/user-attachments/assets/8e86b547-c2e9-4a92-98cb-d4a7a7cc00a1" /><img width="359" alt="image" src="https://github.com/user-attachments/assets/a885630c-04af-4a54-9add-691ec9bffc2b" />![image](https://github.com/user-attachments/assets/1d98ae19-0d7d-4215-b14e-66e1ae3e0500)# Rupiah-Banknote-Authenticity-Detector
 
 <p align="center">
   <img src="real_fake_rupiah/assets/images/Mockup%20Start%20App.png" alt="Screenshot 1" width="150"/>
@@ -523,7 +523,7 @@ The experimental setup for hyperparameter tuning using Optuna is detailed in the
 <p align="center">
   <img width="673" alt="image" src="https://github.com/user-attachments/assets/0c429200-0cb7-457e-9ee7-d8a6fa4687a7" />
   <br>
-  <strong>Optuna</strong>
+  <strong>Hyperparameter tuning testing scheme with Optuna</strong>
 </p>
 
 The table above presents the hyperparameters tested in this study, focusing on key aspects of the model architecture, particularly the optimizer selection, learning rate, and dropout rate.
@@ -582,6 +582,19 @@ Additionally, Flutter provides a library that supports TensorFlow Lite (TFLite),
 
 By integrating Flutter with TensorFlow Lite, the trained model can be efficiently deployed into an application that runs smoothly across different devices. The deployment scheme in this development process is illustrated in the following figure.
 
+<p align="center">
+  <img width="359" alt="image" src="https://github.com/user-attachments/assets/816cffef-9435-416c-b91b-d3809ebd84bf" />
+  <br>
+  <strong>Deployment Scheme</strong>
+</p>
+
+The model deployment scheme illustrated in the figure above begins with the collection of Rupiah banknote images, which are then used for training to produce a classification model for authenticating banknotes. The trained model is then converted into the TensorFlow Lite (TFLite) format for lightweight deployment.
+
+Next, the TensorFlow Lite model is integrated into Flutter, a multi-platform development framework. Using Flutter allows the classification model, which was initially only runnable in Kaggle Notebook, to be deployed across multiple platforms and operating systems, including Android, iOS, web, and desktop. In this development, Android is used for testing.
+
+The final stage of the deployment process involves the model’s output, which consists of a text-based prediction result (authentic or counterfeit) along with its probability score or confidence level. Additionally, the model output is enhanced with an audio feature to assist visually impaired users in identifying the authenticity of a banknote based on the model’s confidence level. The details of the audio outputs used in this system are presented in the following table.
+
+<img width="359" alt="image" src="https://github.com/user-attachments/assets/a885630c-04af-4a54-9add-691ec9bffc2b" />
 
 
 ## 📝 Evaluation & Analysis
