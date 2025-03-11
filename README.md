@@ -1,4 +1,4 @@
-# Rupiah-Banknote-Authenticity-Detector
+![image](https://github.com/user-attachments/assets/1d98ae19-0d7d-4215-b14e-66e1ae3e0500)# Rupiah-Banknote-Authenticity-Detector
 
 <p align="center">
   <img src="real_fake_rupiah/assets/images/Mockup%20Start%20App.png" alt="Screenshot 1" width="150"/>
@@ -500,12 +500,6 @@ These different parameter combinations were tested to identify the optimal confi
 
 ### Training Using Image Augmentation
 
-<p align="center">
-  <img width="528" alt="image" src="https://github.com/user-attachments/assets/dc84e619-4dca-4f9e-a5d6-51ebc2bb9970" />
-  <br>
-  <strong>Optuna</strong>
-</p>
-
 This study utilizes a custom CNN architecture with a relatively complex structure, along with two pre-trained architectures, VGG-19 and EfficientNetV2B2. Complex models tend to be more prone to overfitting, making the use of image augmentation an effective strategy to mitigate this issue.
 
 As highlighted in the research by Fahim & Tumpa (2023) titled "Image Augmentation Techniques: Enhancing Deep Learning Performance", image augmentation allows for the generation of multiple variations of existing images through transformations, thereby enhancing the quality of training data. Additionally, image augmentation helps reduce overfitting and enables the model to generalize better to unseen data. This is because augmentation increases the model’s robustness to variations in object appearance, orientation, deformation, and lighting conditions, ultimately improving its overall resilience and adaptability.
@@ -514,6 +508,60 @@ To evaluate its impact, this stage involves an experiment comparing the model’
 
 ### Hyperparameter Tuning with Optuna
 
+<p align="center">
+  <img width="289" alt="image" src="https://github.com/user-attachments/assets/7f8c714c-4f8d-4607-b8bb-0afd7f0ca252" />
+  <br>
+  <strong>Optuna</strong>
+</p>
+
+At this stage, hyperparameter tuning is conducted using Optuna, an open-source framework designed to automate hyperparameter optimization. The sampling technique utilized in this study is TPESampler, which monitors the validation loss during optimization.
+
+This approach aligns with the findings of Gerben (2020) in the article "Comparing Hyperparameter Optimization Frameworks in Python: A Conceptual and Pragmatic Approach", which concluded that TPESampler demonstrates superior performance, although it is not necessarily the fastest compared to other sampling techniques.
+
+The experimental setup for hyperparameter tuning using Optuna is detailed in the following table.
+
+<p align="center">
+  <img width="673" alt="image" src="https://github.com/user-attachments/assets/0c429200-0cb7-457e-9ee7-d8a6fa4687a7" />
+  <br>
+  <strong>Optuna</strong>
+</p>
+
+The table above presents the hyperparameters tested in this study, focusing on key aspects of the model architecture, particularly the optimizer selection, learning rate, and dropout rate.
+
+#### Optimizer Selection
+
+Several optimizers were tested, including Adam, AdamW, RMSprop, and SGD. These optimizers were chosen because each has unique characteristics that can impact model performance during training.
+
+#### Learning Rate Optimization
+
+Optuna was utilized to determine the optimal learning rate, with a search range set between 1e-5 and 1e-1. The suggest_loguniform method in Optuna allows the selection of a learning rate in a logarithmic scale, providing greater flexibility in exploring the hyperparameter space.
+
+#### Dropout Rate Optimization
+
+The dropout rate was also optimized using Optuna. Dropout is a regularization technique that reduces overfitting by randomly disabling a certain percentage of neurons in the neural network during training. This approach aligns with insights from López et al. (2022) in the book "Multivariate Statistical Machine Learning Methods for Genomic Prediction", which emphasizes that neural networks are more prone to overfitting on training data. One way to mitigate this issue is by applying dropout, which randomly sets some weights to zero in the hidden layers to prevent overfitting.
+
+In this study, two dropout rates were tested: 0.2 and 0.5. Using the suggest_categorical approach, Optuna selects the dropout rate that yields the best model performance.
+
+#### Hyperparameter Tuning Process
+
+The hyperparameter tuning process with Optuna ran for 5 hours, with a maximum of 100 trials. The allocated 5-hour duration was expected to allow Optuna to explore the hyperparameter space effectively and identify an optimal combination. The tuning process was evaluated based on model performance for each trial, primarily using the validation loss metric.
+
+### Grad-CAM
+
+According to information from **Bank Indonesia (2017)**, cited in **Limanto & Kusuma (2020)**, the **2016 series of Rupiah banknotes** include **12 security features** as officially regulated by the **Currency Management Department of Bank Indonesia**, namely:
+
+1.  Money Material;
+2.	Money Color;
+3.	Security Thread;
+4.	Colour Shifting Ink;
+5.	Multicolour Latent Image;
+6.	Special Printing Technique;
+7.	Blind Code;
+8.	Watermark;
+9.	Rectoverso;
+10.	Invisible Ink;
+11.	Microtext; and
+12.	Latent Image.
 
 
 ## 📝 Evaluation & Analysis
