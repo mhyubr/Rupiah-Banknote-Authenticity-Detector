@@ -1,4 +1,4 @@
-# Rupiah-Banknote-Authenticity-Detector
+![image](https://github.com/user-attachments/assets/eb367275-cbda-4490-9250-22f57ff077cc)# Rupiah-Banknote-Authenticity-Detector
 
 <p align="center">
   <img src="real_fake_rupiah/assets/images/Mockup%20Start%20App.png" alt="Screenshot 1" width="150"/>
@@ -373,5 +373,44 @@ In the first layer of EfficientNetV2B2, there is a stem layer consisting sequent
 Each block concludes with an add operation, which merges information from multiple layers within the block, enabling deeper and more diverse feature learning. After passing through these seven blocks, the output from the last block is processed through a Global Average Pooling layer, reducing the feature dimensions into a one-dimensional vector of length 1408. This vector is then passed to a fully connected (dense) layer with 512 neurons. Finally, the output from the dense layer is fed into the output layer, which utilizes the softmax activation function to classify the image as either an authentic or counterfeit Rupiah banknote.
 
 In this EfficientNetV2B2 architecture, dropout regularization is not applied to maintain the integrity of performance comparisons between the pre-trained EfficientNetV2B2 model and other architectures during testing. This approach ensures that model performance evaluations are conducted fairly and objectively, without any influence from regularization techniques that could alter the final results. Overall, the EfficientNetV2B2 architecture used in this training process consists of 9,409,520 trainable parameters with a memory usage of 35.89 MB.
+
+## 🧠 Modeling
+
+The three neural network architectures prepared beforehand—custom CNN, VGG-19, and EfficientNetV2B2—were then trained using several training schemes. The model training process utilized a dataset that had undergone preprocessing steps, including labeling, splitting, and preprocessing. The images were then converted into numerical arrays with three channels (red, green, and blue) to match the input layer of the model architecture.
+
+The loss function used during training was categorical crossentropy. Categorical crossentropy calculates the loss between the probability distribution predicted by the model and the actual probability distribution (true labels). This loss function is particularly well-suited for multi-class classification tasks when using the softmax activation function in the output layer. Softmax produces probability outputs that serve as input to the categorical crossentropy function. Softmax allows the model to predict class probabilities, while categorical crossentropy measures the prediction error, enabling both functions to work together to improve model accuracy. This loss function updates the model's weights during training to minimize prediction errors.
+
+The primary evaluation metric used was accuracy, which is a common measure of a model's classification performance. Accuracy calculates the proportion of correct predictions out of the total predictions made by the model, providing a clear understanding of how well the model classifies data into the correct categories (authentic or counterfeit). Accuracy offers direct and easily interpretable feedback on the model’s ability to predict the correct labels and is often the key metric for evaluating classification models.
+
+<p align="center">
+  <img width="275" alt="image" src="https://github.com/user-attachments/assets/12391dac-288d-406b-8ea0-ebdc3169ca4c" />
+  <br>
+  <strong>Feedforward and backpropagation process flow</strong>
+</p>
+
+After the model is compiled, it is trained using the training and validation datasets. During this stage, the custom CNN, VGG-19, and EfficientNetV2B2 models learn from the data by adjusting the weights and biases in each layer through the feedforward and backpropagation processes.
+
+During the feedforward process, input data—converted into numerical arrays with three channels (red, green, and blue)—is passed through the neural network layers to generate a predicted output. Each layer in the custom CNN, VGG-19, and EfficientNetV2B2 architectures processes the data sequentially through convolution, pooling, and fully connected layers to obtain the final prediction. This prediction is then compared to the actual labels using the categorical cross-entropy (CCE) loss function, which calculates the error or loss. The loss measures the difference between the model’s prediction and the expected outcome for a single sample, while the cost represents the average loss across all samples in a batch.
+
+During backpropagation, this error is used to compute gradients for each weight in the network, which are then updated using the AdamW optimizer. This optimizer incorporates decoupled weight decay to prevent overfitting, allowing the custom CNN, VGG-19, and EfficientNetV2B2 models to learn effectively and achieve high classification accuracy.
+
+The overall training configuration used for model development is summarized in the following table.
+
+<p align="center">
+  <img width="598" alt="image" src="https://github.com/user-attachments/assets/1e705808-2bf6-4468-acb1-28af57bc334b" />
+  <br>
+  <strong>Model training configuration</strong>
+</p>
+
+The table above outlines the training configuration applied in this development. The models were trained using the AdamW optimizer with a small learning rate of 1e-05. The chosen loss function was categorical cross-entropy, which is commonly used for multi-class classification tasks in combination with the softmax activation function in the output layer. The evaluation metric used was accuracy to assess model performance. The models were trained for a maximum of 1,000 epochs to ensure adequate convergence. To maintain consistency in data splitting and model training, a fixed seed value of 42 was applied.
+
+### Callbacks
+
+The model training process can leverage the use of callbacks to facilitate the storage of the best-performing model, halt training when necessary, and dynamically adjust the learning rate. In this development, three types of callbacks were utilized: Early Stopping, Model Checkpoint, and ReduceLROnPlateau.
+
+### Early Stopping
+
+
+
 
 ## 📝 Evaluation & Analysis
