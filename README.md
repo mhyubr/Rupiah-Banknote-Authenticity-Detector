@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/1d98ae19-0d7d-4215-b14e-66e1ae3e0500)# Rupiah-Banknote-Authenticity-Detector
+<img width="359" alt="image" src="https://github.com/user-attachments/assets/a885630c-04af-4a54-9add-691ec9bffc2b" />![image](https://github.com/user-attachments/assets/1d98ae19-0d7d-4215-b14e-66e1ae3e0500)# Rupiah-Banknote-Authenticity-Detector
 
 <p align="center">
   <img src="real_fake_rupiah/assets/images/Mockup%20Start%20App.png" alt="Screenshot 1" width="150"/>
@@ -562,6 +562,26 @@ According to information from **Bank Indonesia (2017)**, cited in **Limanto & Ku
 10.	Invisible Ink;
 11.	Microtext; and
 12.	Latent Image.
+
+Similarly, according to an article from Jurnal Universitas Kebangsaan (2024), several additions and modifications were made to the security features of the 2022 series of Rupiah banknotes, namely:
+
+1. A wider security thread with color-changing effects when viewed from different angles.
+2. A hidden image containing the denomination and issuance year, visible under ultraviolet light.
+3. Color-shifting ink that changes appearance depending on the viewing angle.
+4. Microprinting with tiny inscriptions that can only be seen using a magnifying glass.
+
+To identify these features, this study utilizes Grad-CAM (Gradient-weighted Class Activation Mapping). Grad-CAM is a visualization technique used in deep learning to understand how convolutional models, such as CNNs (Convolutional Neural Networks), make predictions. This method helps explain model decisions by generating heatmaps that highlight the most influential areas of an input image in the prediction process.
+
+By applying Grad-CAM, developers can determine which features the model considers significant during identification, providing deeper insight into how the model operates in the context of Rupiah banknote authenticity detection. Additionally, this technique serves as a valuable tool for evaluating and improving model performance by offering insights into areas that may require further attention or adjustments during training and validation. The use of Grad-CAM in this study aims not only to enhance model accuracy but also to ensure interpretability and reliability, making the results more trustworthy and actionable.
+
+## 📲 Deployment
+
+At this stage, the developer deploys the previously trained model using Flutter, a multi-platform application development framework. Flutter is chosen for its capability to run on various platforms efficiently.
+
+Additionally, Flutter provides a library that supports TensorFlow Lite (TFLite), an open-source framework developed by Google to run machine learning models on resource-constrained devices such as smartphones, tablets, and IoT devices. The tflite_v2 library acts as an intermediary extension, enabling TensorFlow Lite to function seamlessly within the Flutter development environment.
+
+By integrating Flutter with TensorFlow Lite, the trained model can be efficiently deployed into an application that runs smoothly across different devices. The deployment scheme in this development process is illustrated in the following figure.
+
 
 
 ## 📝 Evaluation & Analysis
