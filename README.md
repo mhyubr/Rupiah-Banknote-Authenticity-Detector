@@ -329,10 +329,49 @@ The models used in this development are custom CNN architectures and pre-trained
 The pre-trained architectures VGG-19 and EfficientNetV2B2 are used with a fully-trainable approach, meaning all layers are retrained to perform fine-tuning.
 
 <p align="center">
-  <img width="400" alt="image" src="https://github.com/user-attachments/assets/05f30162-1aae-4cbe-8253-f64c0134df8d" />
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/05f30162-1aae-4cbe-8253-f64c0134df8d" />
   <br>
-  <strong>Height shift</strong>
+  <strong>Custom CNN architecture</strong>
 </p>
 
+The custom CNN architecture, as shown in Figure, receives input in the form of images with sizes of 256 × 256 pixels, 448 × 448 pixels, or 512 × 512 pixels, which are tested through hyperparameter tuning (the largest input size is used in Figure IV.23) with three channels (red, green, and blue). The neural network structure consists of five main blocks, where each block contains Conv2D and MaxPooling layers.
+
+Block 1 starts the process with a single Conv2D layer containing 32 filters of size 3×3, followed by a MaxPooling layer of size 2×2 to reduce spatial dimensions. In Block 2 and Block 3, the number of filters increases to 64 with a 3×3 kernel, followed by a 2×2 MaxPooling layer. This pattern continues in Block 4 and Block 5, where the number of filters increases to 128.
+
+After passing through these five blocks, the output from the last block is flattened into a one-dimensional vector. This vector is then forwarded to a fully connected (dense) layer with 512 neurons using ReLU activation, followed by a dropout layer with a rate of 0.2 to prevent overfitting by disabling some neurons during training. Finally, the output from the dense layer is passed to an output layer with two neurons, which uses the softmax activation function to determine the probability of two different classes (genuine or counterfeit). All parameters in this network are trainable, meaning every weight is updated during the training process, with a total of 13,124,352 parameters and a memory usage of 50.07 MB.
+
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/99bdb0df-1030-4a4a-825b-299d1cc436ec" />
+  <br>
+  <strong>VGG-19 Architecture</strong>
+</p>
+
+In the pre-trained VGG-19 architecture shown in the figure, the input layer receives Rupiah banknotes as images in the form of three channels (red, green, and blue). The VGG-19 structure consists of five convolutional blocks, each containing two Conv2D (convolution) layers followed by a MaxPooling layer. The main characteristic of this architecture is that in each block, the spatial dimensions of the image are reduced, while the number of filters (which indicate features) increases.
+
+In Block 1, the convolutional layer uses filters with a size of 64, followed by MaxPooling to reduce spatial dimensions. In Block 2, the number of filters increases to 128, with a further reduction in image size. In Blocks 3 and 4, the filter size continues to increase to 256 and 512, respectively, along with further reductions in image dimensions. Finally, in Block 5, the filter size remains at 512, but the image dimensions continue to decrease.
+
+After passing through the five convolutional blocks, Global Average Pooling is applied to reduce the dimensions to 512 features in a one-dimensional vector. Once the dimensionality is reduced through pooling, these features pass through a fully connected (dense) layer with 512 neurons using ReLU activation to process the extracted features. In the output layer, the features go through a probability classification process using the softmax activation function, which determines whether the image belongs to the genuine or counterfeit Rupiah banknote class.
+
+In this VGG-19 architecture, dropout regularization is not applied to maintain the authenticity of the performance comparison between the pre-trained VGG-19 model and other architectures during testing. This approach ensures that each model's performance is evaluated fairly and objectively without interference from regularization techniques that could influence the final results. Overall, the VGG-19 architecture has approximately 9,409,520 trainable parameters with a memory size of 77.39 MB.
+
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/9da6d431-5a23-4ceb-b105-a59761aab2aa" />
+  <br>
+  <strong>EfficientNetV2B2 Architecture</strong>
+</p>
+
+The image displays the EfficientNetV2B2 architecture used in this development. The architecture processes input images of Indonesian Rupiah banknotes with varying resolutions, which will be tested using hyperparameter tuning. The input images are then converted into a format with three channels (red, green, and blue).
+
+In the first layer of EfficientNetV2B2, there is a stem layer consisting sequentially of an input layer, rescaling, normalization, zero padding, Conv2D, batch normalization, and activation. The subsequent layers consist of seven main blocks, where each block contains a combination of modules (Module 1, Module 2, and Module 3) that perform various convolution operations. These operations aim to reduce model complexity while enhancing processing efficiency. A detailed structure of each module in the EfficientNetV2B2 architecture can be seen in the following table.
+
+<p align="center">
+  <img width="538" alt="image" src="https://github.com/user-attachments/assets/52e1af22-ad80-4433-ba25-dc6c13e1e925" />
+  <br>
+  <strong>Layer arrangement in the EfficientNetV2B2 architecture module</strong>
+</p>
+
+Each block concludes with an add operation, which merges information from multiple layers within the block, enabling deeper and more diverse feature learning. After passing through these seven blocks, the output from the last block is processed through a Global Average Pooling layer, reducing the feature dimensions into a one-dimensional vector of length 1408. This vector is then passed to a fully connected (dense) layer with 512 neurons. Finally, the output from the dense layer is fed into the output layer, which utilizes the softmax activation function to classify the image as either an authentic or counterfeit Rupiah banknote.
+
+In this EfficientNetV2B2 architecture, dropout regularization is not applied to maintain the integrity of performance comparisons between the pre-trained EfficientNetV2B2 model and other architectures during testing. This approach ensures that model performance evaluations are conducted fairly and objectively, without any influence from regularization techniques that could alter the final results. Overall, the EfficientNetV2B2 architecture used in this training process consists of 9,409,520 trainable parameters with a memory usage of 35.89 MB.
 
 ## 📝 Evaluation & Analysis
