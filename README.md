@@ -746,4 +746,86 @@ From a **training efficiency perspective**, the results also confirm that the **
 
 **Compared to Custom CNN and VGG-19, EfficientNetV2B2 offers superior performance and faster training times.** This advantage is attributed to its **advanced scaling techniques**, which proportionally **balance image resolution, model depth, and network width**. As a result, EfficientNetV2B2 **achieves high performance with fewer parameters and lower computational costs** compared to **traditional pre-trained models like VGG-19**, which are often **heavier and require longer training times**. Additionally, **EfficientNetV2B2 incorporates more efficient modules for handling data, enabling faster and more stable convergence without sacrificing accuracy**. The combination of **optimized architecture and efficient techniques** makes **EfficientNetV2B2 a superior choice in both performance and training efficiency compared to conventional models like Custom CNN and VGG-19**.
 
+#### Comparison Based on Performance of Authenticity Identification of Rupiah Banknotes
+
+<p align="center">
+  <img width="354" alt="image" src="https://github.com/user-attachments/assets/453aa593-1424-47bd-86fa-a5078e2a107d" />
+  <br>
+  <strong>Comparison of model accuracy on 12 types of training scenarios</strong>
+</p>
+
+**Accuracy** measures the **proportion of correct predictions** out of the total predictions made by the model. Based on the **figure above**, **EfficientNetV2B2 achieved the highest accuracy of 0.94** in multiple scenarios, specifically in **Scenario 3 and Scenario 5**. This result indicates that the model is **highly accurate** in predicting the authenticity of Rupiah banknotes on the given dataset. 
+
+In comparison, **Custom CNN demonstrated lower performance**, with a **maximum accuracy of 0.79**, while **VGG-19 achieved a maximum accuracy of 0.85**. This means that both models **underperformed compared to EfficientNetV2B2**, further reinforcing **EfficientNetV2B2’s superiority** in **classification accuracy**.
+
+<p align="center">
+  <img width="354" alt="image" src="https://github.com/user-attachments/assets/8ea9028d-afdf-42ad-af34-8b58cc77e3f7" />
+  <br>
+  <strong>Comparison of model F1-Macro on 12 types of training scenarios</strong>
+</p>
+
+**F1-Macro** provides a **balanced view of precision and recall**, making it an essential metric to evaluate the overall performance of the model. The **figure above** shows that **EfficientNetV2B2 again outperforms the other models, achieving the highest F1-Macro score of 0.93**. This result indicates that **EfficientNetV2B2 is not only effective in detecting counterfeit banknotes but also efficient in minimizing false positives**.
+
+In contrast, **Custom CNN and VGG-19 recorded F1-Macro scores of 0.74 and 0.75, respectively**, highlighting their **lower and less balanced performance compared to EfficientNetV2B2**. The **lower F1-Macro scores** for Custom CNN and VGG-19 suggest that these models **may produce more errors**, including **both false positives and false negatives**. This means that **they might fail to detect some counterfeit banknotes or, conversely, misclassify genuine banknotes as counterfeit**, potentially reducing **user trust** in the system.
+
+Therefore, a **high F1-Macro score**, such as the **0.93 achieved by EfficientNetV2B2**, serves as **a strong indicator of model stability and reliability**. This makes it the **preferred choice** for **real-world applications**, where **accurate detection is crucial** for preventing fraud.
+
+<p align="center">
+  <img width="357" alt="image" src="https://github.com/user-attachments/assets/35d2e1e5-7ab6-4fc2-9ca9-23730d4434ae" />
+  <br>
+  <strong>Comparison of model Precision-Macro on 12 types of training scenarios</strong>
+</p>
+
+**Precision-Macro** measures the model’s ability to **avoid false positives**, meaning how well it **prevents genuine banknotes from being classified as counterfeit**. Based on the **figure above**, **EfficientNetV2B2 once again demonstrates its superiority with the highest Precision-Macro score of 0.92**. This indicates that the model is not only effective in detecting counterfeit banknotes but also **highly efficient in minimizing misclassification errors**.
+
+In comparison, **Custom CNN achieved a highest Precision-Macro score of 0.75**, while **VGG-19 reached 0.88**. This suggests that **VGG-19 performs closer to EfficientNetV2B2**, whereas **Custom CNN still requires significant improvement in reducing false positives**.
+
+##### **Impact of Low Precision-Macro on Custom CNN**
+A **low Precision-Macro score in Custom CNN** suggests that the model **struggles to accurately detect genuine banknotes**. This means it has a **higher tendency to misclassify genuine money as counterfeit**, which can be **problematic for users relying on the system**—especially **visually impaired individuals** who depend on accurate classification.
+
+##### **Why EfficientNetV2B2 is the Best Choice**
+On the other hand, **EfficientNetV2B2, with the highest Precision-Macro score, ensures that genuine banknotes are not mistakenly classified as counterfeit**. This minimizes **potential inconvenience and financial loss** for visually impaired users. **With its superior precision and reliability, EfficientNetV2B2 stands out as the most promising model for further deployment and real-world application.**
+
+<p align="center">
+  <img width="349" alt="image" src="https://github.com/user-attachments/assets/02241cc5-e01a-4306-9511-53bc359e3d2e" />
+  <br>
+  <strong>Comparison of model Recall-Macro on 12 types of training scenarios</strong>
+</p>
+
+**Recall-Macro** is the most critical metric in this context, as it measures **how well the model detects counterfeit banknotes**. This is a crucial aspect of Rupiah authenticity detection, as **ensuring that all counterfeit money is identified is essential** in preventing its circulation, which could cause economic losses and undermine public trust in the financial system.
+
+##### **EfficientNetV2B2: The Best Recall-Macro Score**
+Based on the **figure above**, **EfficientNetV2B2 achieves the highest Recall-Macro score of 0.93**, indicating that this model is **highly effective and reliable in detecting counterfeit money**. This high score suggests that **EfficientNetV2B2 can identify almost all counterfeit bills** in the dataset, thereby minimizing the risk of **false negatives**—where counterfeit money is mistakenly classified as genuine. This is **especially critical for visually impaired individuals** who rely on the system for verification.
+
+##### **Custom CNN: Moderate Recall Performance**
+In contrast, **Custom CNN achieves a highest Recall-Macro score of 0.77**, indicating that while it can detect a significant portion of counterfeit money, it still **falls behind EfficientNetV2B2**. This means that **Custom CNN may fail to detect some counterfeit bills**, leading to **potential security risks** in applications that require a **high level of accuracy**.
+
+##### **VGG-19: The Weakest Recall Performance**
+Even more concerning, **VGG-19 only reaches a Recall-Macro score of 0.71**, making it the weakest among the three models in detecting counterfeit money. This suggests that **VGG-19 has substantial limitations in recall**, meaning it **frequently fails to detect counterfeit banknotes**. In real-world applications, this **high miss rate could make the model unreliable**, increasing the **risk of counterfeit currency circulation**.
+
+##### **Why EfficientNetV2B2 is the Best Choice**
+The significant differences in Recall-Macro scores among these three models highlight **EfficientNetV2B2’s superiority** in counterfeit money detection. Compared to **Custom CNN and VGG-19**, **EfficientNetV2B2 stands out as the best choice for public use, particularly for visually impaired individuals**, due to its ability to **consistently detect counterfeit banknotes with high accuracy and reliability**.
+
+<p align="center">
+  <img width="345" alt="image" src="https://github.com/user-attachments/assets/1855171e-f49d-4ac4-9e75-7774705d0765" />
+  <br>
+  <strong>Comparison of model ROC-AUC Macro on 12 types of training scenarios</strong>
+</p>
+
+EfficientNetV2B2 achieved the highest ROC-AUC Score of 0.98, indicating that the model is nearly perfect in distinguishing between genuine and counterfeit banknotes. Custom CNN and VGG-19 recorded maximum scores of 0.89 and 0.86, respectively, demonstrating decent performance but still falling short of EfficientNetV2B2. This suggests that Custom CNN and VGG-19 have certain limitations in consistently differentiating between genuine and counterfeit banknotes, potentially leading to false positives or false negatives. While both models are reliable, further improvements are needed to reach the same level of accuracy and reliability as EfficientNetV2B2, particularly in applications where detection errors could have significant consequences.  
+
+Further analysis of false positives and false negatives can be conducted using a Confusion Matrix, which provides a detailed overview of how each model classifies test data. The Confusion Matrix presents the number of true positives (correctly identified counterfeit banknotes), true negatives (correctly identified genuine banknotes), false positives (genuine banknotes incorrectly classified as counterfeit), and false negatives (counterfeit banknotes incorrectly classified as genuine). This analysis offers deeper insights into the specific weaknesses of each model in distinguishing between genuine and counterfeit banknotes, serving as a foundation for further improvements.
+
+<p align="center">
+  <img width="390" alt="image" src="https://github.com/user-attachments/assets/eb4e5dfa-fb09-4beb-9f8b-be047dc4385f" />
+  <br>
+  <strong>Comparison of Confusion Matrix on three models</strong>
+</p>
+
+Based on the figure above, the Custom CNN model recorded 30 false positives and 15 false negatives. This indicates that while the model frequently misclassified genuine banknotes as counterfeit, it performed relatively well in detecting actual counterfeit banknotes. In contrast, the VGG-19 model significantly reduced false positives to just 2 but increased false negatives to 30. This suggests that although VGG-19 was highly effective in avoiding misclassification of genuine banknotes as counterfeit, it struggled significantly in detecting counterfeit banknotes, posing a major risk in this development.  
+
+On the other hand, EfficientNetV2B2 demonstrated the best performance, with only 7 false positives and 5 false negatives. While some misclassifications were still present, the model significantly outperformed the other two in detecting counterfeit banknotes, with far fewer errors in both categories. These results further reinforce the reliability of EfficientNetV2B2 in verifying the authenticity of Rupiah banknotes, making it the most suitable model for use by the general public, particularly individuals with visual impairments.  
+
+However, highly complex models with strong performance are often susceptible to overfitting, necessitating further evaluation. To assess potential overfitting, training history results—comprising accuracy history, loss history, and learning rate history—are presented for the three models with the best identification performance in the following figures.
+
 ## 🎯 Conclusion
