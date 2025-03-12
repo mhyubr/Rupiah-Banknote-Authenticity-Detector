@@ -637,12 +637,18 @@ Additionally, this **deployment scheme** includes an **automatic flash activatio
 The implementation in **Flutter** also enables **developers** to leverage **customizable widgets** in UI design. By using **customizable widgets**, developers can create a **practical and user-friendly** interface tailored for visually impaired users. The **application mockup**, designed to support the UI development process, is illustrated in the figure below.
 
 <p align="center">
-  <img width="121" alt="image" src="https://github.com/user-attachments/assets/9a967d03-21af-4ae9-a3fa-33222f58fba6" />
+  <img width="200" alt="image" src="https://github.com/user-attachments/assets/9a967d03-21af-4ae9-a3fa-33222f58fba6" />
   <br>
   <strong>Application Mockup when first run</strong>
 </p>
 
 The image above displays the initial application screen when first launched. At the top of the screen, the application title is shown. In the center of the screen, there is a notification providing instructions on how to start and stop the authentication process for Rupiah banknotes. At the bottom of the screen, the Telkom University logo is added as a watermark for this Rupiah authenticity detection application.
+
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/335c6e24-91e8-4701-9dbc-5d58bacc4482" />
+  <br>
+  <strong>Application Mockup when first run</strong>
+</p>
 
 The next image showcases the application mockup designed for Android devices to authenticate Rupiah banknotes, featuring two main views:
 
