@@ -583,7 +583,7 @@ Additionally, Flutter provides a library that supports TensorFlow Lite (TFLite),
 By integrating Flutter with TensorFlow Lite, the trained model can be efficiently deployed into an application that runs smoothly across different devices. The deployment scheme in this development process is illustrated in the following figure.
 
 <p align="center">
-  <img width="359" alt="image" src="https://github.com/user-attachments/assets/816cffef-9435-416c-b91b-d3809ebd84bf" />
+  <img width="359" alt="image" src="https://github.com/user-attachments/assets/8e86b547-c2e9-4a92-98cb-d4a7a7cc00a1" />
   <br>
   <strong>Deployment Scheme</strong>
 </p>
