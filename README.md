@@ -702,6 +702,27 @@ These results indicate that while the **Custom CNN model** achieved **moderate p
 
 #### VGG-19
 
+<p align="center">
+  <<img width="667" alt="image" src="https://github.com/user-attachments/assets/97301d6a-34ec-4ce6-9903-df724635a4ce" />
+  <br>
+  <strong>The results of testing the hyperparameter tuning scenario with grid search on a VGG-19 using a performance matrix</strong>
+</p>
+    
+The table above presents the **evaluation results of the VGG-19 model**, tested across various **hyperparameter scenarios**. Based on the results, the **best performance** was achieved in **Scenario 1**, with a **train-validation split of 70:30, an image size of 256 pixels, and a batch size of 32**. This configuration yielded an **accuracy of 0.85**, an **F1-Macro score of 0.75**, a **Precision-Macro score of 0.88**, a **Recall-Macro score of 0.71**, and an **ROC-AUC score of 0.89**.
+
+<p align="center">
+  <<img width="667" alt="image" src="https://github.com/user-attachments/assets/97301d6a-34ec-4ce6-9903-df724635a4ce" />
+  <br>
+  <strong>The results of testing the hyperparameter tuning scenario with grid search on a VGG-19 using a time matrix</strong>
+</p>
+
+The table above presents the **training time metrics** for the **VGG-19 model**, including the **number of epochs, training time per epoch, and total training time**. The most **efficient training scenario** was achieved with a **train-validation split of 70:30, an image size of 256 pixels, and a batch size of 64**. Under this configuration, the model required **12 epochs**, with a **training time per epoch of 49.98 seconds**, resulting in a **total training time of approximately 9 minutes and 59 seconds**.  
+
+These results indicate that the **VGG-19 model can achieve a good identification performance**, particularly with the **train-validation split of 70:30, an image size of 256 pixels, and a batch size of 32**. This configuration yielded **an accuracy of 0.85 and a Precision-Macro score of 0.88**. However, careful memory management is required, as **out-of-memory issues** were encountered in some scenarios, especially when using **larger image sizes (448 and 512 pixels) or a larger batch size of 64**.
+
+### EfficientNetV2B2
+
+
 
 
 ## 🎯 Conclusion
