@@ -645,9 +645,9 @@ The implementation in **Flutter** also enables **developers** to leverage **cust
 The image above displays the initial application screen when first launched. At the top of the screen, the application title is shown. In the center of the screen, there is a notification providing instructions on how to start and stop the authentication process for Rupiah banknotes. At the bottom of the screen, the Telkom University logo is added as a watermark for this Rupiah authenticity detection application.
 
 <p align="center">
-  <img width="500" alt="image" src="https://github.com/user-attachments/assets/335c6e24-91e8-4701-9dbc-5d58bacc4482" />
+  <img width="400" alt="image" src="https://github.com/user-attachments/assets/335c6e24-91e8-4701-9dbc-5d58bacc4482" />
   <br>
-  <strong>Application Mockup when first run</strong>
+  <strong>Mockup of the application when detecting the authenticity of Rupiah banknotes</strong>
 </p>
 
 The next image showcases the application mockup designed for Android devices to authenticate Rupiah banknotes, featuring two main views:
@@ -668,6 +668,40 @@ By utilizing Flutter, this application ensures a responsive and accessible inter
 - Automated UI and audio adjustments based on detection results.
 - Model confidence level visualization through text and audio cues.
 
-
-
 ## 📝 Evaluation & Analysis
+
+### Best Model Selection Using Hyperparameter Tuning Testing with Grid Search
+
+At the **best model selection stage**, hyperparameter tuning is conducted using **grid search** to evaluate **three model architectures**: **Custom CNN, VGG-19, and EfficientNetV2B2**. The model that demonstrates the **best performance** in terms of **authentication accuracy** and **training time efficiency** will be selected to proceed to the **next evaluation phase**.
+
+#### Training Results Based on Identification Performance and Training Time
+
+This section discusses the **training results** of the three tested model architectures: **Custom CNN, VGG-19, and EfficientNetV2B2**, based on their **authentication performance** and **training time**. The models were evaluated using **hyperparameter tuning with grid search**, exploring various configurations to determine the best combination that yields **optimal performance and training efficiency**.
+
+The analysis includes an evaluation of **performance metrics** such as **accuracy, F1-Macro, Precision-Macro, Recall-Macro, and ROC-AUC Score**, which measure the model’s ability to **authenticate Rupiah banknotes**. Additionally, **training efficiency** is assessed based on the **number of epochs, training time per epoch, and total training time**. These evaluation results serve as the basis for selecting the **best model** to proceed to the **next testing phase**.
+
+##### Custom CNN
+
+<p align="center">
+  <img width="667" alt="image" src="https://github.com/user-attachments/assets/c2bf6694-3851-4160-84a5-32bb4b606be6" />
+  <br>
+  <strong>The results of testing the hyperparameter tuning scenario with grid search on a custom CNN using a performance matrix</strong>
+</p>
+
+**The Table above** presents the **evaluation results** of the **Custom CNN model** tested under various **hyperparameter scenarios**. Based on the results, the **best performance** was achieved in **Scenario 12**, which used a **train-validation split of 80:20, an image size of 512 pixels, and a batch size of 64**. This configuration resulted in an **accuracy of 0.79, F1-Macro of 0.74, Precision-Macro of 0.73, Recall-Macro of 0.77, and a ROC-AUC Score of 0.86**.
+
+<p align="center">
+  <img width="667" alt="image" src="https://github.com/user-attachments/assets/53cb6dfe-180c-4774-8678-400165735ccd" />
+  <br>
+  <strong>The results of testing the hyperparameter tuning scenario with grid search on a custom CNN using a time matrix</strong>
+</p>
+
+The table above presents the **training time metrics** of the **Custom CNN model**, including the **number of epochs, training time per epoch, and total training time**. The most **efficient training scenario** was achieved with a **train-validation split of 80:20, an image size of 512 pixels, and a batch size of 64**. Under this configuration, the model required **36 epochs**, with a **training time per epoch of 40.65 seconds**, resulting in a **total training time of approximately 24 minutes and 23 seconds**.  
+
+These results indicate that while the **Custom CNN model** achieved **moderate performance** in identifying the authenticity of Rupiah banknotes, it did so within a relatively short training time. However, some scenarios required **significantly longer training times**. The **best-performing configuration (train-validation split 80:20, image size 512 pixels, batch size 64)** not only yielded the **highest identification accuracy** but also demonstrated **training efficiency**, with a **shorter total training time compared to other configurations**. Despite these findings, further improvements are needed, particularly in **enhancing model performance**.
+
+#### VGG-19
+
+
+
+## 🎯 Conclusion
