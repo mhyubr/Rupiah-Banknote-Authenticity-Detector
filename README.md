@@ -703,7 +703,7 @@ These results indicate that while the **Custom CNN model** achieved **moderate p
 #### VGG-19
 
 <p align="center">
-  <<img width="667" alt="image" src="https://github.com/user-attachments/assets/97301d6a-34ec-4ce6-9903-df724635a4ce" />
+  <img width="667" alt="image" src="https://github.com/user-attachments/assets/97301d6a-34ec-4ce6-9903-df724635a4ce" />
   <br>
   <strong>The results of testing the hyperparameter tuning scenario with grid search on a VGG-19 using a performance matrix</strong>
 </p>
@@ -711,7 +711,7 @@ These results indicate that while the **Custom CNN model** achieved **moderate p
 The table above presents the **evaluation results of the VGG-19 model**, tested across various **hyperparameter scenarios**. Based on the results, the **best performance** was achieved in **Scenario 1**, with a **train-validation split of 70:30, an image size of 256 pixels, and a batch size of 32**. This configuration yielded an **accuracy of 0.85**, an **F1-Macro score of 0.75**, a **Precision-Macro score of 0.88**, a **Recall-Macro score of 0.71**, and an **ROC-AUC score of 0.89**.
 
 <p align="center">
-  <<img width="667" alt="image" src="https://github.com/user-attachments/assets/97301d6a-34ec-4ce6-9903-df724635a4ce" />
+  <img width="667" alt="image" src="https://github.com/user-attachments/assets/97301d6a-34ec-4ce6-9903-df724635a4ce" />
   <br>
   <strong>The results of testing the hyperparameter tuning scenario with grid search on a VGG-19 using a time matrix</strong>
 </p>
@@ -722,7 +722,28 @@ These results indicate that the **VGG-19 model can achieve a good identification
 
 ### EfficientNetV2B2
 
+<p align="center">
+  <img width="667" alt="image" src="https://github.com/user-attachments/assets/c2266ce8-074e-44e0-9f1f-cde8f5d2498c" />
+  <br>
+  <strong>The results of testing the hyperparameter tuning scenario with grid search on a EfficientNetV2B2 using a performance matrix</strong>
+</p>
 
+The table above presents the **evaluation results** of the **EfficientNetV2B2 model**, tested across various **hyperparameter scenarios**. Based on the results, the **best performance** was achieved in **Scenario 3**, with a **train-validation split of 70:30, an image size of 448 pixels, and a batch size of 32**. This configuration yielded an **accuracy of 0.94, an F1-Macro score of 0.93, a Precision-Macro score of 0.92, a Recall-Macro score of 0.93, and a ROC-AUC score of 0.98**.
 
+<p align="center">
+  <img width="667" alt="image" src="https://github.com/user-attachments/assets/67af8f94-02ed-42a6-a1d4-047b79ddb6d1" />
+  <br>
+  <strong>The results of testing the hyperparameter tuning scenario with grid search on a EfficientNetV2B2 using a time matrix</strong>
+</p>
+
+The table above presents the **evaluation results** of the **EfficientNetV2B2 model**, focusing on **training time metrics**, which include the **number of epochs, training time per epoch, and total training time**. The most **efficient training scenario** was achieved with a **train-validation split of 70:30, an image size of 256 pixels, and a batch size of 32**. Under this configuration, the model required **37 epochs, with a training time of 42.43 seconds per epoch**, resulting in a **total training time of approximately 26 minutes and 9 seconds**.
+
+These results indicate that **EfficientNetV2B2 excels in authenticity identification** for Rupiah banknotes. The best **identification performance** was obtained using a **train-validation split of 70:30, an image size of 448 pixels, and a batch size of 32**, yielding an **accuracy of 0.94, an F1-Macro score of 0.93, a Precision-Macro score of 0.92, a Recall-Macro score of 0.93, and a ROC-AUC score of 0.98**. This demonstrates the model’s **high precision and recall**, making it a **strong candidate for banknote authentication**.
+
+However, **EfficientNetV2B2 faced memory limitations (out of memory errors) when using a batch size of 64 or larger image sizes, such as 448 and 512 pixels**. This suggests that while the model is **highly effective in terms of accuracy and performance, memory constraints may pose challenges** when processing larger datasets or using higher batch sizes.
+
+From a **training efficiency perspective**, the results also confirm that the **fastest training scenario was achieved with a train-validation split of 70:30, an image size of 256 pixels, and a batch size of 32**, requiring **37 epochs with an average training time of 42.43 seconds per epoch, totaling approximately 26 minutes and 9 seconds**. This demonstrates that EfficientNetV2B2 is **not only superior in performance but also relatively efficient in training time**. However, like **VGG-19**, additional adjustments or increased computational resources **may be required** to handle configurations with larger batch sizes or image resolutions.
+
+**Compared to Custom CNN and VGG-19, EfficientNetV2B2 offers superior performance and faster training times.** This advantage is attributed to its **advanced scaling techniques**, which proportionally **balance image resolution, model depth, and network width**. As a result, EfficientNetV2B2 **achieves high performance with fewer parameters and lower computational costs** compared to **traditional pre-trained models like VGG-19**, which are often **heavier and require longer training times**. Additionally, **EfficientNetV2B2 incorporates more efficient modules for handling data, enabling faster and more stable convergence without sacrificing accuracy**. The combination of **optimized architecture and efficient techniques** makes **EfficientNetV2B2 a superior choice in both performance and training efficiency compared to conventional models like Custom CNN and VGG-19**.
 
 ## 🎯 Conclusion
