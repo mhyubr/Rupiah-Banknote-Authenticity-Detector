@@ -583,7 +583,7 @@ Additionally, Flutter provides a library that supports TensorFlow Lite (TFLite),
 By integrating Flutter with TensorFlow Lite, the trained model can be efficiently deployed into an application that runs smoothly across different devices. The deployment scheme in this development process is illustrated in the following figure.
 
 <p align="center">
-  <img width="359" alt="image" src="https://github.com/user-attachments/assets/8e86b547-c2e9-4a92-98cb-d4a7a7cc00a1" />
+  <img width="624" alt="image" src="https://github.com/user-attachments/assets/eade5521-0f78-4bc4-a4ba-b15d29edbabe" />
   <br>
   <strong>Deployment Scheme</strong>
 </p>
@@ -594,7 +594,40 @@ Next, the TensorFlow Lite model is integrated into Flutter, a multi-platform dev
 
 The final stage of the deployment process involves the model’s output, which consists of a text-based prediction result (authentic or counterfeit) along with its probability score or confidence level. Additionally, the model output is enhanced with an audio feature to assist visually impaired users in identifying the authenticity of a banknote based on the model’s confidence level. The details of the audio outputs used in this system are presented in the following table.
 
-<img width="359" alt="image" src="https://github.com/user-attachments/assets/a885630c-04af-4a54-9add-691ec9bffc2b" />
+<p align="center">
+  <img width="624" alt="image" src="https://github.com/user-attachments/assets/eade5521-0f78-4bc4-a4ba-b15d29edbabe" />
+  <br>
+  <strong>Deployment Scheme</strong>
+</p>
 
+### ✅ Real Money
+
+| **Tingkat Kepercayaan** | **Output Audio** |
+|------------------------|----------------|
+| **> 90%**  | ✅ Uang asli keyakinan di atas **90%**. |
+| **> 80%**  | ✅ Uang asli keyakinan di atas **80%**. |
+| **≥ 70%**  | ✅ Uang asli keyakinan di atas **70%**. |
+| **< 70%**  | ⚠️ Uang asli keyakinan di bawah **70%**, hati-hati menggunakannya! |
+| **< 60%**  | ⚠️ Uang asli keyakinan di bawah **60%**, hati-hati menggunakannya! |
+| **< 50%**  | ⚠️ Uang asli keyakinan di bawah **50%**, hati-hati menggunakannya! |
+| **< 40%**  | ⚠️ Uang asli keyakinan di bawah **40%**, hati-hati menggunakannya! |
+| **< 30%**  | ⚠️ Uang asli keyakinan di bawah **30%**, hati-hati menggunakannya! |
+| **< 20%**  | ⚠️ Uang asli keyakinan di bawah **20%**, hati-hati menggunakannya! |
+| **< 10%**  | ⚠️ Uang asli keyakinan di bawah **10%**, hati-hati menggunakannya! |
+
+### ❌ Counterfeit money 
+
+| **Tingkat Kepercayaan** | **Output Audio** |
+|------------------------|----------------|
+| **> 90%**  | ❌ Uang palsu keyakinan di atas **90%**, **jangan digunakan!** |
+| **> 80%**  | ❌ Uang palsu keyakinan di atas **80%**, **jangan digunakan!** |
+| **> 70%**  | ❌ Uang palsu keyakinan di atas **70%**, **jangan digunakan!** |
+| **> 60%**  | ❌ Uang palsu keyakinan di atas **60%**, **jangan digunakan!** |
+| **≥ 50%**  | ❌ Uang palsu keyakinan di atas **50%**, **jangan digunakan!** |
+| **< 50%**  | ⚠️ Uang palsu keyakinan di bawah **50%**, hati-hati menggunakannya! |
+| **< 40%**  | ⚠️ Uang palsu keyakinan di bawah **40%**, hati-hati menggunakannya! |
+| **< 30%**  | ⚠️ Uang palsu keyakinan di bawah **30%**, hati-hati menggunakannya! |
+| **< 20%**  | ⚠️ Uang palsu keyakinan di bawah **20%**, hati-hati menggunakannya! |
+| **< 10%**  | ⚠️ Uang palsu keyakinan di bawah **10%**, hati-hati menggunakannya! |
 
 ## 📝 Evaluation & Analysis
