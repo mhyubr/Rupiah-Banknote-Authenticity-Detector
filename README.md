@@ -594,12 +594,6 @@ Next, the TensorFlow Lite model is integrated into Flutter, a multi-platform dev
 
 The final stage of the deployment process involves the model’s output, which consists of a text-based prediction result (authentic or counterfeit) along with its probability score or confidence level. Additionally, the model output is enhanced with an audio feature to assist visually impaired users in identifying the authenticity of a banknote based on the model’s confidence level. The details of the audio outputs used in this system are presented in the following table.
 
-<p align="center">
-  <img width="624" alt="image" src="https://github.com/user-attachments/assets/eade5521-0f78-4bc4-a4ba-b15d29edbabe" />
-  <br>
-  <strong>Deployment Scheme</strong>
-</p>
-
 ### ✅ Real Money
 
 | **Tingkat Kepercayaan** | **Output Audio** |
@@ -629,5 +623,45 @@ The final stage of the deployment process involves the model’s output, which c
 | **< 30%**  | ⚠️ Uang palsu keyakinan di bawah **30%**, hati-hati menggunakannya! |
 | **< 20%**  | ⚠️ Uang palsu keyakinan di bawah **20%**, hati-hati menggunakannya! |
 | **< 10%**  | ⚠️ Uang palsu keyakinan di bawah **10%**, hati-hati menggunakannya! |
+
+The table above illustrates the use of **audio output** to guide users, particularly visually impaired individuals, in utilizing the application's core features. There are **three main conditions**:  
+
+1. When the application is launched, users receive **audio instructions** to **double-tap** the screen to start or stop the authentication process for Rupiah banknotes.  
+2. When users **double-tap to start detection**, the application provides an **audio notification** confirming the action.  
+3. Similarly, when users **double-tap to stop detection**, an audio notification is also provided.  
+
+This **audio-based interaction** ensures that visually impaired users can easily navigate the application and understand its operational status without relying on visual elements.  
+
+Additionally, this **deployment scheme** includes an **automatic flash activation feature**, which turns on the **device's flashlight** when using the application. This enhancement allows **visually impaired users** to perform **authentication more effectively** under various lighting conditions.  
+
+The implementation in **Flutter** also enables **developers** to leverage **customizable widgets** in UI design. By using **customizable widgets**, developers can create a **practical and user-friendly** interface tailored for visually impaired users. The **application mockup**, designed to support the UI development process, is illustrated in the figure below.
+
+<p align="center">
+  <img width="121" alt="image" src="https://github.com/user-attachments/assets/9a967d03-21af-4ae9-a3fa-33222f58fba6" />
+  <br>
+  <strong>Application Mockup when first run</strong>
+</p>
+
+The image above displays the initial application screen when first launched. At the top of the screen, the application title is shown. In the center of the screen, there is a notification providing instructions on how to start and stop the authentication process for Rupiah banknotes. At the bottom of the screen, the Telkom University logo is added as a watermark for this Rupiah authenticity detection application.
+
+The next image showcases the application mockup designed for Android devices to authenticate Rupiah banknotes, featuring two main views:
+
+1. When detecting genuine Rupiah banknotes.
+2. When detecting counterfeit Rupiah banknotes.
+
+In the center of the screen, the camera feed is displayed, capturing real-time images of the banknotes. At the bottom of the screen, the detection results are displayed as text output indicating "genuine" or "fake." The text color differentiates the results:
+
+- Green for genuine banknotes.
+- Red for counterfeit banknotes.
+
+Additionally, the model confidence level is presented as a percentage, representing the system's certainty in its prediction. A countdown timer is also included, displaying the time remaining before the next detection cycle.
+
+By utilizing Flutter, this application ensures a responsive and accessible interface for visually impaired users. Furthermore, it simplifies the integration of essential features, such as:
+
+- Audio notifications for key interactions.
+- Automated UI and audio adjustments based on detection results.
+- Model confidence level visualization through text and audio cues.
+
+
 
 ## 📝 Evaluation & Analysis
