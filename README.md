@@ -1,4 +1,4 @@
-<img width="359" alt="image" src="https://github.com/user-attachments/assets/8e86b547-c2e9-4a92-98cb-d4a7a7cc00a1" /><img width="359" alt="image" src="https://github.com/user-attachments/assets/a885630c-04af-4a54-9add-691ec9bffc2b" />![image](https://github.com/user-attachments/assets/1d98ae19-0d7d-4215-b14e-66e1ae3e0500)# Rupiah-Banknote-Authenticity-Detector
+# Rupiah-Banknote-Authenticity-Detector
 
 <p align="center">
   <img src="real_fake_rupiah/assets/images/Mockup%20Start%20App.png" alt="Screenshot 1" width="150"/>
