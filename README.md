@@ -749,7 +749,7 @@ From a **training efficiency perspective**, the results also confirm that the **
 #### Comparison Based on Performance of Authenticity Identification of Rupiah Banknotes
 
 <p align="center">
-  <img width="354" alt="image" src="https://github.com/user-attachments/assets/453aa593-1424-47bd-86fa-a5078e2a107d" />
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/453aa593-1424-47bd-86fa-a5078e2a107d" />
   <br>
   <strong>Comparison of model accuracy on 12 types of training scenarios</strong>
 </p>
@@ -759,7 +759,7 @@ From a **training efficiency perspective**, the results also confirm that the **
 In comparison, **Custom CNN demonstrated lower performance**, with a **maximum accuracy of 0.79**, while **VGG-19 achieved a maximum accuracy of 0.85**. This means that both models **underperformed compared to EfficientNetV2B2**, further reinforcing **EfficientNetV2B2’s superiority** in **classification accuracy**.
 
 <p align="center">
-  <img width="354" alt="image" src="https://github.com/user-attachments/assets/8ea9028d-afdf-42ad-af34-8b58cc77e3f7" />
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/8ea9028d-afdf-42ad-af34-8b58cc77e3f7" />
   <br>
   <strong>Comparison of model F1-Macro on 12 types of training scenarios</strong>
 </p>
@@ -771,7 +771,7 @@ In contrast, **Custom CNN and VGG-19 recorded F1-Macro scores of 0.74 and 0.75, 
 Therefore, a **high F1-Macro score**, such as the **0.93 achieved by EfficientNetV2B2**, serves as **a strong indicator of model stability and reliability**. This makes it the **preferred choice** for **real-world applications**, where **accurate detection is crucial** for preventing fraud.
 
 <p align="center">
-  <img width="357" alt="image" src="https://github.com/user-attachments/assets/35d2e1e5-7ab6-4fc2-9ca9-23730d4434ae" />
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/35d2e1e5-7ab6-4fc2-9ca9-23730d4434ae" />
   <br>
   <strong>Comparison of model Precision-Macro on 12 types of training scenarios</strong>
 </p>
@@ -787,7 +787,7 @@ A **low Precision-Macro score in Custom CNN** suggests that the model **struggle
 On the other hand, **EfficientNetV2B2, with the highest Precision-Macro score, ensures that genuine banknotes are not mistakenly classified as counterfeit**. This minimizes **potential inconvenience and financial loss** for visually impaired users. **With its superior precision and reliability, EfficientNetV2B2 stands out as the most promising model for further deployment and real-world application.**
 
 <p align="center">
-  <img width="349" alt="image" src="https://github.com/user-attachments/assets/02241cc5-e01a-4306-9511-53bc359e3d2e" />
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/02241cc5-e01a-4306-9511-53bc359e3d2e" />
   <br>
   <strong>Comparison of model Recall-Macro on 12 types of training scenarios</strong>
 </p>
@@ -807,7 +807,7 @@ Even more concerning, **VGG-19 only reaches a Recall-Macro score of 0.71**, maki
 The significant differences in Recall-Macro scores among these three models highlight **EfficientNetV2B2’s superiority** in counterfeit money detection. Compared to **Custom CNN and VGG-19**, **EfficientNetV2B2 stands out as the best choice for public use, particularly for visually impaired individuals**, due to its ability to **consistently detect counterfeit banknotes with high accuracy and reliability**.
 
 <p align="center">
-  <img width="345" alt="image" src="https://github.com/user-attachments/assets/1855171e-f49d-4ac4-9e75-7774705d0765" />
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/1855171e-f49d-4ac4-9e75-7774705d0765" />
   <br>
   <strong>Comparison of model ROC-AUC Macro on 12 types of training scenarios</strong>
 </p>
@@ -817,7 +817,7 @@ EfficientNetV2B2 achieved the highest ROC-AUC Score of 0.98, indicating that the
 Further analysis of false positives and false negatives can be conducted using a Confusion Matrix, which provides a detailed overview of how each model classifies test data. The Confusion Matrix presents the number of true positives (correctly identified counterfeit banknotes), true negatives (correctly identified genuine banknotes), false positives (genuine banknotes incorrectly classified as counterfeit), and false negatives (counterfeit banknotes incorrectly classified as genuine). This analysis offers deeper insights into the specific weaknesses of each model in distinguishing between genuine and counterfeit banknotes, serving as a foundation for further improvements.
 
 <p align="center">
-  <img width="390" alt="image" src="https://github.com/user-attachments/assets/eb4e5dfa-fb09-4beb-9f8b-be047dc4385f" />
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/eb4e5dfa-fb09-4beb-9f8b-be047dc4385f" />
   <br>
   <strong>Comparison of Confusion Matrix on three models</strong>
 </p>
