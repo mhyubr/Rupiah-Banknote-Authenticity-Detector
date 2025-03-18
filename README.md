@@ -1,4 +1,4 @@
-# Rupiah-Banknote-Authenticity-Detector
+<img width="312" alt="image" src="https://github.com/user-attachments/assets/23b6ca47-08d3-44a0-a2f2-02fbf428f7f8" /># Rupiah-Banknote-Authenticity-Detector
 
 <p align="center">
   <img src="real_fake_rupiah/assets/images/Mockup%20Start%20App.png" alt="Screenshot 1" width="150"/>
@@ -860,6 +860,64 @@ For VGG-19, the learning rate also started at 1e-5 and showed a gradual decline 
 
 For EfficientNetV2B2, the learning rate remained stable at 1e-5 throughout most of the training process and only experienced a sharp decline after epoch 50. This reduction occurred after the model had reached its peak performance, with a validation accuracy of 0.95 and a validation loss of 0.1561. The decrease in the learning rate allowed for smaller, more refined updates, ensuring that the model did not overfit and continued learning effectively from the data. As a result, EfficientNetV2B2 demonstrated excellent performance on validation data without significant signs of overfitting.
 
+#### Comparison Based on Model Training Time
 
+The comparison of model training time is based on three evaluation metrics: the number of epochs during training, training time per epoch, and total training time.
+
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/1dd96ac0-5569-410e-a400-bfcd539e9918" />
+  <br>
+  <strong>Comparison of the number of epochs in 12 types of training scenarios</strong>
+</p>
+
+The image above illustrates the number of epochs used by each model across different training scenarios. The custom CNN model has the highest average number of epochs, approximately 86.08, with some scenarios reaching up to 149 epochs in scenario 1. This indicates that the custom CNN requires more epochs to achieve convergence, potentially suggesting that the model takes longer to learn from the data or requires more adjustments in the training process.
+
+On the other hand, VGG-19 shows a lower average number of epochs, around 21.00. This suggests that although VGG-19 is more complex, it tends to converge more quickly or encounters early stopping due to overfitting on the training data. The lower number of epochs could also be associated with high memory usage, which may cause the model to stop training earlier.
+
+EfficientNetV2B2 has an average epoch count of 43.88, indicating a balance between the required number of epochs and training efficiency. This suggests that EfficientNetV2B2 not only converges faster than the custom CNN but is also more stable than VGG-19, which tends to stop training prematurely.
+
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/818a600f-6e4c-430e-b83b-954a3ddf412d" />
+  <br>
+  <strong>Comparison of the training time per epoch in 12 types of training scenarios</strong>
+</p>
+
+The image above illustrates the training time per epoch for the three models. The custom CNN maintains a relatively consistent training time per epoch, averaging around 37.23 seconds per epoch. This indicates that the model is fairly efficient in terms of per-epoch training time, although it requires more epochs overall.
+
+For the VGG-19 architecture, as expected from a more complex model, it has the longest training time per epoch, averaging 47.34 seconds per epoch. Some scenarios even show training times exceeding 50 seconds per epoch, indicating that this model requires more time to process data, likely due to the network's complexity and the significantly higher number of parameters.
+
+EfficientNetV2B2 demonstrates a more balanced performance, with an average training time per epoch of 43.96 seconds. This suggests that while the model is complex, it maintains training efficiency, being faster than VGG-19 but slightly slower than the custom CNN. This balance highlights EfficientNetV2B2’s ability to optimize both model complexity and training time.
+
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/ab0d238b-47c9-4cbd-b790-cd6a6ad9d4c0" />
+  <br>
+  <strong>Comparison of the total training time in 12 types of training scenarios</strong>
+</p>
+
+The image above illustrates the total training time required for each model to achieve its best performance. The custom CNN has the longest total training time, averaging **3160.00 seconds**, with some scenarios exceeding **4900 seconds**. This high total training time is due to a combination of a high number of epochs and relatively long training time per epoch, indicating that the model requires more time to learn and reach convergence.  
+
+The **VGG-19** architecture, despite having the longest training time per epoch, exhibits a lower total training time, averaging **955.83 seconds**. This is due to the fewer epochs needed for convergence, even though the model requires more time per epoch. This suggests that VGG-19 tends to reach optimal performance or overfit more quickly, resulting in a shorter overall training duration.  
+
+**EfficientNetV2B2** demonstrates a **moderate total training time**, averaging **1847.50 seconds**. This indicates that the model not only converges faster than the custom CNN but is also more stable in terms of both the number of epochs and per-epoch training time compared to VGG-19. The total training time suggests that EfficientNetV2B2 delivers **high performance with efficient training**, making it a **balanced and effective choice** for applications requiring strong performance without excessive training time.  
+
+This aligns with the model’s **relatively smaller size and more efficient architecture** compared to other models like VGG-19. The smaller model size allows for **lower computational resource usage** while maintaining or even improving accuracy and overall performance. Thus, **EfficientNetV2B2 becomes an ideal choice** for applications where both training speed and model efficiency are crucial, such as **real-time tasks or deployments on hardware-constrained devices**.
+
+### Testing Using Image Augmentation
+
+In this experiment, image augmentation was applied to enhance the **EfficientNetV2B2** model’s ability to handle a broader range of data variations and ensure optimal performance. The results of this experiment are presented in **the table above**, which provides details on **Accuracy, Precision, Recall, and F1-Score** after applying augmentation.
+
+<p align="center">
+  <img width="449" alt="image" src="https://github.com/user-attachments/assets/2b5d6989-9eb5-4569-bfef-d2b31dbc21a2" />
+  <br>
+  <strong>Classification report EfficientNetV2 on image augmentation testing</strong>
+</p>
+
+After applying image augmentation to the **EfficientNetV2B2** model, an analysis was conducted to compare its performance before and after augmentation.  
+
+Before augmentation, the **EfficientNetV2B2** model demonstrated excellent performance, achieving a **highest accuracy of 0.94**, an **F1-Macro score of 0.93**, a **Precision-Macro score of 0.92**, a **Recall-Macro score of 0.93**, and a **ROC-AUC score of 0.98**. These values indicate that the model was highly effective in detecting counterfeit money with **high accuracy and a strong ability to avoid false positives and false negatives**.  
+
+However, after applying image augmentation, **some changes occurred in the model’s performance metrics**. Accuracy dropped to **0.88**, suggesting that while the model became more robust to data variations, the added complexity from augmentation led to a slight decrease in overall accuracy. The **F1-Macro score decreased to 0.81**, indicating that despite maintaining high precision, the recall declined, affecting the model’s overall balance in detecting counterfeit money. **Precision-Macro slightly dropped to 0.89**, showing that the model remained effective at minimizing false positives. The most significant impact was observed in the **Recall-Macro score, which fell to 0.77**, meaning that the model experienced an **increase in false negatives**, where more counterfeit banknotes were misclassified as genuine after augmentation. This issue is particularly concerning if the model is intended for **verifying the authenticity of Rupiah banknotes**, especially for visually impaired individuals.  
+
+A similar observation has been confirmed by **Shorten & Khoshgoftaar (2019)** in their study, **“A Survey on Image Data Augmentation for Deep Learning”**, which states that **not all image augmentation techniques improve model performance**. The effectiveness of image augmentation **depends heavily on the transformation techniques used and the dataset size**. Applying **irrelevant transformations may not enhance performance and can even degrade the model’s accuracy**.
 
 ## 🎯 Conclusion
