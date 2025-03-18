@@ -840,6 +840,26 @@ However, highly complex models with strong performance are often susceptible to 
   <strong>History loss of training of the three models</strong>
 </p>
 
+The images above illustrate the accuracy and loss curves during training, showing that a well-generalized model exhibits minimal differences between training and validation accuracy, as well as between training and validation loss. Additionally, the image above displays the dynamic learning rate applied through ReduceLROnPlateau, which automatically reduces the learning rate when improvements in validation loss stagnate.  
+
+Based on the images above, the custom CNN model shows signs of overfitting. This is evident from the significant gap between training and validation accuracy after epoch 17. While training accuracy continues to increase, reaching 0.8881 at epoch 36, validation accuracy fluctuates and does not show consistent improvement after peaking at epoch 17. Furthermore, validation loss starts increasing after reaching its lowest point at epoch 26, while training loss continues to decrease. The fluctuations in validation accuracy and the rise in validation loss beyond the optimal point indicate that the model begins to learn noise and specific details from the training data that do not generalize well to validation data.  
+
+VGG-19 falls into the category of severe overfitting. This is apparent from the stark contrast between training and validation accuracy. Training accuracy reaches a high value of 0.9328 at epoch 33, but validation accuracy stops improving after epoch 30, and validation loss experiences significant fluctuations throughout training. The loss graph also shows unstable spikes in validation loss, indicating that the model memorizes training data, including irrelevant or overly specific details. As a result, the model fails to generalize well to validation data, demonstrating clear signs of severe overfitting.  
+
+In contrast, EfficientNetV2B2 does not exhibit significant overfitting. Training and validation accuracy remain high and closely aligned, with training accuracy reaching 1.0 at epoch 52 and validation accuracy reaching 0.95 at epoch 48. Validation loss also decreases alongside training loss, though not as drastically, indicating that the model maintains strong performance on unseen data. Additionally, the dynamic learning rate helps sustain this balance by reducing the learning rate when necessary, preventing the model from learning noise in the training data. Therefore, EfficientNetV2B2 can be considered to have minimal overfitting while maintaining strong generalization capabilities.
+
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/4573d9c7-b667-49c4-9776-ab4ce1c62aa2" />
+  <br>
+  <strong>History learning of training of the three models</strong>
+</p>
+
+Based on the image above, the custom CNN model initially had a learning rate set at 1e-5, which remained stable for most of the early epochs. However, after epoch 90, the learning rate started to decrease drastically. This reduction reflects an attempt to mitigate the increase in validation loss after reaching its lowest point at epoch 26. Despite the lowered learning rate, there was no significant improvement in validation accuracy, indicating that the model had already started overfitting, and the reduction in the learning rate was insufficient to restore validation performance to a higher level.  
+
+For VGG-19, the learning rate also started at 1e-5 and showed a gradual decline after epoch 10, corresponding to the large fluctuations observed in validation loss. The learning rate was reduced multiple times during training, especially when validation loss became unstable and validation accuracy stopped improving. While this reduction helped maintain model stability, it was not entirely effective in preventing overfitting, as evident from the significant gap between training and validation metrics. This suggests that despite the application of a dynamic learning rate, the VGG-19 model still exhibited a strong tendency to overfit the training data.  
+
+For EfficientNetV2B2, the learning rate remained stable at 1e-5 throughout most of the training process and only experienced a sharp decline after epoch 50. This reduction occurred after the model had reached its peak performance, with a validation accuracy of 0.95 and a validation loss of 0.1561. The decrease in the learning rate allowed for smaller, more refined updates, ensuring that the model did not overfit and continued learning effectively from the data. As a result, EfficientNetV2B2 demonstrated excellent performance on validation data without significant signs of overfitting.
+
 
 
 ## 🎯 Conclusion
