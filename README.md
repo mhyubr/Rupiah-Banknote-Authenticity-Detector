@@ -828,4 +828,18 @@ On the other hand, EfficientNetV2B2 demonstrated the best performance, with only
 
 However, highly complex models with strong performance are often susceptible to overfitting, necessitating further evaluation. To assess potential overfitting, training history results—comprising accuracy history, loss history, and learning rate history—are presented for the three models with the best identification performance in the following figures.
 
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/ae15c5fe-9547-4c68-a96b-d62d88f658d5" />
+  <br>
+  <strong>History accuracy of training of the three models</strong>
+</p>
+
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/4573d9c7-b667-49c4-9776-ab4ce1c62aa2" />
+  <br>
+  <strong>History loss of training of the three models</strong>
+</p>
+
+
+
 ## 🎯 Conclusion
