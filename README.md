@@ -1014,6 +1014,23 @@ Notably, **Grad-CAM** reveals that although some areas are highlighted, the dist
 
 Therefore, **Grad-CAM** effectively demonstrates **why the model identifies these banknotes as counterfeit**—by showing the absence of focus on **well-known and essential security features**. This analysis provides **visual validation** that the model is not merely relying on general characteristics but is actively verifying the presence of specific security elements that should be present in **authentic banknotes**.
 
+### Real-Time Prediction Testing Through Flutter Deployment
 
+At this stage, the **developer** conducted real-time model testing through deployment on the **Flutter framework**. A total of **18 Rupiah banknotes**, both genuine and counterfeit, from the **2016 and 2022 emissions** were used as **test samples**.  
+
+The testing process was carried out in **two phases**: **before deployment** and **after deployment**. The **results before deployment** can be seen **in the table above**, while the **results after deployment** are also presented **in the table below**.
+
+<p align="center">
+  <img width="414" alt="image" src="https://github.com/user-attachments/assets/dfa73166-f77a-41c9-8dfa-9383fbd3de93" />
+  <img width="414" alt="image" src="https://github.com/user-attachments/assets/ba6f26a6-844f-4a1c-81e8-ed911923e9c1" />
+  <br>
+  <strong>Model testing results before deployment</strong>
+</p>
+
+In the **table above**, the model's performance in predicting the authenticity of **Rupiah banknotes** before deployment on the **Flutter application** is presented. The testing was conducted on **18 banknote samples** with different **denominations and emission years (2016 and 2022)**. The model demonstrated **high accuracy** in detecting genuine banknotes, with a confidence level **above 98%** for most test samples. However, in detecting counterfeit banknotes, the model showed **variability in accuracy**, as some counterfeit notes were classified as genuine with varying confidence levels.  
+
+Before deployment, the model's performance in **detecting counterfeit banknotes** was **not yet optimal**, particularly for counterfeit notes with **lower confidence levels**. In some test samples, the model struggled to differentiate between **genuine and counterfeit notes**, as indicated by **misclassifications** of counterfeit banknotes with relatively **high confidence levels**. This suggests that certain **patterns or authenticity features** were still present in the counterfeit banknotes' images.  
+
+This aligns with the findings of **Corbière et al. (2019)**, which state that the **threshold for confidence levels** can vary depending on the **specific needs of an application** and the **trade-off between false positives and false negatives**. In more **sensitive applications**, such as **medical diagnosis, facial recognition,** and **banknote authentication**, a **higher confidence threshold**—for example, **70% or 80%**—would be more appropriate to reduce the risk of **misclassification errors**.
 
 ## 🎯 Conclusion
