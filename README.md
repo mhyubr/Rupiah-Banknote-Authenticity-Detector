@@ -920,4 +920,33 @@ However, after applying image augmentation, **some changes occurred in the model
 
 A similar observation has been confirmed by **Shorten & Khoshgoftaar (2019)** in their study, **“A Survey on Image Data Augmentation for Deep Learning”**, which states that **not all image augmentation techniques improve model performance**. The effectiveness of image augmentation **depends heavily on the transformation techniques used and the dataset size**. Applying **irrelevant transformations may not enhance performance and can even degrade the model’s accuracy**.
 
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/dc13e493-39ee-4cd1-aca0-98b1e267d136" />
+  <br>
+  <strong>ROC-AUC Curve EfficientNetV2 on image augmentation testing</strong>
+</p>
+
+Nevertheless, as seen in the image above, the ROC-AUC Score remains high at 0.96, indicating that the model is still highly effective in distinguishing between genuine and counterfeit banknotes, despite a slight decline in overall performance after augmentation. Overall, image augmentation enhances the model’s generalization ability but also adds complexity to the detection process, particularly in identifying counterfeit banknotes. These results suggest that while augmentation contributes to improving the model's robustness, it is not always effective in enhancing its performance. Further improvements through more optimal augmentation combinations are necessary to enhance the model’s performance, especially in terms of recall for detecting counterfeit banknotes.
+
+### Testing Using Hyperparameter Tuning with Optuna
+
+At this stage, testing was conducted using hyperparameter tuning with Optuna to optimize the performance of the EfficientNetV2B2 model. Optuna utilized TPESampler as the sampling technique, with various parameters optimized, including the optimizer type (Adam, AdamW, RMSProp, and SGD), learning rate ranging from 1e-5 to 1e-1, and dropout rate between 0.2 and 0.5. The results of this testing are presented in the table above, providing details on Accuracy, Precision, Recall, and F1-Score after applying augmentation.
+
+<p align="center">
+  <img width="598" alt="image" src="https://github.com/user-attachments/assets/ce43b4d5-eaa9-4f0a-b470-83ece7d0deb4" />
+  <br>
+  <strong>Classification report EfficientNetV2 on hyperparameter tuning testing with Optuna</strong>
+</p>
+
+Based on the table above, after performing hyperparameter tuning using Optuna on the EfficientNetV2B2 model, there were significant changes in several performance metrics compared to the results before tuning. Before tuning, EfficientNetV2B2 demonstrated excellent performance with the highest accuracy of 0.94, an F1-Macro score of 0.93, a Precision-Macro score of 0.92, and a Recall-Macro score of 0.93. These results indicate that the model remained highly accurate and nearly perfect in distinguishing between genuine and counterfeit currency. However, after tuning, accuracy slightly decreased to 0.89, while F1-Macro and Precision-Macro dropped to 0.83 and 0.88, respectively. Recall-Macro also declined to 0.81, indicating that although the model remained effective in detecting counterfeit currency, there was an increase in the number of undetected counterfeit notes (false negatives).
+
+Nevertheless, as shown in the image above, the ROC-AUC score decreased by only 0.01 to 0.97 after hyperparameter tuning, indicating that the model still effectively distinguishes between genuine and counterfeit currency with a very low error rate.
+
+<p align="center">
+  <img width="218" alt="image" src="https://github.com/user-attachments/assets/2a838cdd-05de-4a5c-8948-86ae34d7fa73" />
+  <br>
+  <strong></strong>
+</p>
+
+
 ## 🎯 Conclusion
