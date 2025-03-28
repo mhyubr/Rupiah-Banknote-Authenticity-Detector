@@ -1033,4 +1033,14 @@ Before deployment, the model's performance in **detecting counterfeit banknotes*
 
 This aligns with the findings of **Corbière et al. (2019)**, which state that the **threshold for confidence levels** can vary depending on the **specific needs of an application** and the **trade-off between false positives and false negatives**. In more **sensitive applications**, such as **medical diagnosis, facial recognition,** and **banknote authentication**, a **higher confidence threshold**—for example, **70% or 80%**—would be more appropriate to reduce the risk of **misclassification errors**.
 
+<p align="center">
+  <img width="414" alt="image" src="https://github.com/user-attachments/assets/e77d27f2-6af3-41ef-bb0a-1dd9a0f694ae" />
+  <img width="414" alt="image" src="https://github.com/user-attachments/assets/df9fdccf-d179-41dd-a727-87367e6e8102" />
+  <img width="414" alt="image" src="https://github.com/user-attachments/assets/864719a4-54bf-4dcf-b1da-5500d12bf8e3" />
+  <img width="414" alt="image" src="https://github.com/user-attachments/assets/bb82634d-b218-4e1d-a73c-f410826af85f" />
+  <br>
+  <strong>Model testing results after deployment</strong>
+</p>
+
+
 ## 🎯 Conclusion
