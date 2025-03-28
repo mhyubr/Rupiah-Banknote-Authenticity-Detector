@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/db45ac5b-6ebe-4f21-bf07-2c1e83e9d3c0)![image](https://github.com/user-attachments/assets/92f56ed7-79bd-4727-8179-cd401aa048d4)# Rupiah-Banknote-Authenticity-Detector
+# Rupiah-Banknote-Authenticity-Detector
 
 <p align="center">
   <img src="real_fake_rupiah/assets/images/Mockup%20Start%20App.png" alt="Screenshot 1" width="150"/>
@@ -1001,6 +1001,19 @@ For **2016 emission banknotes**, the heatmap reveals that the model focuses sign
 Meanwhile, for **2022 emission banknotes**, the **Grad-CAM heatmap** highlights strong intensity in security features such as **the security thread and hidden image**, which contain the banknote's denomination and emission year. This demonstrates that the model has successfully recognized and utilized the updated security features in the authenticity verification process. The model's focus on these areas suggests that the new security elements have been effectively integrated into the training dataset, enabling it to identify and interpret them accurately.  
 
 Additionally, **Grad-CAM** reveals that the model pays attention to **microprint and color-shifting ink**, which change appearance when viewed from different angles on the **2022 banknotes**. The highlighted regions in the heatmap indicate that the model leverages fine details, which are only visible under magnification or with optical adjustments—important security measures in modern banknotes. This capability allows the model to recognize **not only common and prominent security features** but also **subtle details**, providing an additional layer of security. As a result, the model becomes more reliable in detecting banknote authenticity, even in **complex conditions that may be difficult for the naked eye to verify.**
+
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/4be2bf84-89be-4ce6-be59-2bc0ec3ca0a1" />
+  <br>
+  <strong>Heatmap Grad-CAM on counterfeit Rupiah banknotes issued in 2016 and 2022</strong>
+</p>
+
+The **Grad-CAM heatmap** in the **image above** illustrates the model’s attention when analyzing **counterfeit Rupiah banknotes** from the **2016 and 2022 emissions**. In this heatmap, it is evident that the model assigns high-intensity heatmap areas to certain regions outside the main features of the counterfeit banknotes. The **high intensity is scattered randomly** and does not focus on specific security features, unlike in genuine banknotes.  
+
+Notably, **Grad-CAM** reveals that although some areas are highlighted, the distinctive security features typically found in authentic Rupiah banknotes **are absent in counterfeit images**. This absence leads the model to classify the banknotes as counterfeit. The lack of **consistent patterns and focus on critical security areas** serves as a strong indicator that these counterfeit notes do not possess the expected security characteristics of genuine banknotes.  
+
+Therefore, **Grad-CAM** effectively demonstrates **why the model identifies these banknotes as counterfeit**—by showing the absence of focus on **well-known and essential security features**. This analysis provides **visual validation** that the model is not merely relying on general characteristics but is actively verifying the presence of specific security elements that should be present in **authentic banknotes**.
+
 
 
 ## 🎯 Conclusion
