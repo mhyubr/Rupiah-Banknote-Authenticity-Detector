@@ -1042,5 +1042,12 @@ This aligns with the findings of **Corbière et al. (2019)**, which state that t
   <strong>Model testing results after deployment</strong>
 </p>
 
+Based on the **table above**, all genuine banknotes tested—ranging from **Rp10,000 to Rp100,000** with **2016 and 2022 emissions**—were correctly identified as **authentic** by the deployed model. The model demonstrated **a very high confidence level** in predicting genuine banknotes, consistently above **90%**, reaching **98.55%** for the **Rp100,000 banknote (2022 emission)**.  
+
+Meanwhile, for **counterfeit banknote detection**, the model also successfully identified all **fake banknotes** correctly. However, the **confidence level varied**, with the lowest at **13.79%** for the **Rp50,000 (2022 emission)** and the highest at **49.76%** for the **Rp20,000 (2016 emission)**. Although the model correctly classified them as counterfeit, the **low confidence level** indicates that the model had **some uncertainty** in determining whether the banknotes were **genuine or fake**. This may be due to **device limitations** in capturing **fine-grained security features** from the images, leading to differences in model performance before and after deployment.  
+
+To address this, the **audio output** feature in the application provides a **warning** to **visually impaired users**, advising them to be cautious when handling **banknotes with low confidence levels**. This serves as a **useful alert**, especially for users with **visual impairments**, helping them stay vigilant when receiving banknotes classified with **low confidence levels**.  
+
+Overall, the **model deployment in the Flutter application** delivered **highly accurate results** in detecting **genuine banknotes** and was **reasonably effective** in identifying **counterfeit notes**. The **high confidence level** in predicting **genuine money** ensures that users, particularly **visually impaired individuals**, can trust the model’s classification when using **authentic banknotes**. On the other hand, while the **confidence level for counterfeit banknotes was relatively lower**, the model still provides an important **cautionary signal** to be careful when handling questionable banknotes. The **low confidence level in counterfeit predictions** suggests that **further model adjustments** may be needed to **enhance sensitivity** to counterfeit indicators **without compromising accuracy** in detecting genuine money.
 
 ## 🎯 Conclusion
