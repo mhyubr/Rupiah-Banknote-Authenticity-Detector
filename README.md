@@ -1,4 +1,4 @@
-# Rupiah-Banknote-Authenticity-Detector
+![image](https://github.com/user-attachments/assets/db45ac5b-6ebe-4f21-bf07-2c1e83e9d3c0)![image](https://github.com/user-attachments/assets/92f56ed7-79bd-4727-8179-cd401aa048d4)# Rupiah-Banknote-Authenticity-Detector
 
 <p align="center">
   <img src="real_fake_rupiah/assets/images/Mockup%20Start%20App.png" alt="Screenshot 1" width="150"/>
@@ -943,10 +943,64 @@ Based on the table above, after performing hyperparameter tuning using Optuna on
 Nevertheless, as shown in the image above, the ROC-AUC score decreased by only 0.01 to 0.97 after hyperparameter tuning, indicating that the model still effectively distinguishes between genuine and counterfeit currency with a very low error rate.
 
 <p align="center">
-  <img width="218" alt="image" src="https://github.com/user-attachments/assets/2a838cdd-05de-4a5c-8948-86ae34d7fa73" />
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/2a838cdd-05de-4a5c-8948-86ae34d7fa73" />
   <br>
-  <strong></strong>
+  <strong>ROC-AUC Curve EfficientNetV2 on hyperparameter tuning testing with Optuna</strong>
 </p>
+
+Overall, the tuning results indicate that despite a decline in some metrics, hyperparameter tuning still enables the model to **identify the authenticity of Rupiah banknotes effectively**, particularly in supporting visually impaired individuals in verifying banknote authenticity.  
+
+Additionally, through the use of the **Optuna framework**, several important insights were gained during the hyperparameter tuning process. One key finding was the identification of optimal parameters that successfully minimized validation loss. In the best trial, Optuna discovered a **hyperparameter combination with the lowest validation loss of 0.1633**. These optimal parameters included the **Adam optimizer**, known for its stable performance in model training, a **learning rate of 5.24e-05**, and a **dropout rate of 0.5**. This combination demonstrated a well-balanced approach, allowing the model to learn quickly enough to capture essential patterns while avoiding overfitting, which often occurs with excessively high learning rates or insufficient dropout. These findings highlight that **Optuna is highly effective in searching for optimal hyperparameter configurations** to significantly improve model performance by reducing validation loss, although it requires slightly longer training time.  
+
+Furthermore, another key insight from the **hyperparameter tuning process using Optuna** is the **dynamics of objective values over multiple trials**, as illustrated in **the image above**.  
+
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/8110061e-40b4-4d0f-a054-c34ab808ff0c" />
+  <br>
+  <strong>Optimization History Plot</strong>
+</p>
+
+This graph illustrates the optimization process, where Optuna explores various hyperparameter combinations to achieve the lowest validation loss. From the graph, it is evident that in the **first trial**, Optuna successfully identified a configuration with a validation loss of **0.1633**, which was then established as the **best value**.
+
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/1e6ac336-8f97-4ffc-a35c-40174ee5d333" />
+  <br>
+  <strong>Hyperparameter importance</strong>
+</p>
+
+The **graph above** highlights the importance of various hyperparameters in influencing model performance, as identified during the hyperparameter tuning process with Optuna. The graph reveals that the **optimizer** is the most influential hyperparameter, with an **importance level of 0.55**. This indicates that the choice of optimizer has the greatest impact on the final tuning results, aligning with the optimal finding that **Adam** is the best-performing optimizer.  
+
+Besides the optimizer, the **learning rate** also plays a significant role, with an **importance level of 0.34**. This emphasizes that properly setting the learning rate is crucial for guiding the training process toward effective convergence while avoiding overfitting or underfitting. In the best result, the **learning rate of 5.24e-05** was identified, contributing to model stability during training.  
+
+Lastly, the **dropout rate** has the lowest impact, with an **importance level of 0.12**. Although its influence is relatively lower compared to the optimizer and learning rate, it remains essential in preventing overfitting. The **optimal dropout rate** found during tuning was **0.5**.
+
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/5a323731-03b1-40ec-b7c8-ab0ed275c9df" />
+  <br>
+  <strong>Parallel coordinate plot</strong>
+</p>
+
+The **graph above** presents a **Parallel Coordinate Plot** that illustrates the relationship between various hyperparameters tested during the tuning process with Optuna and their impact on the **objective value (validation loss)**. In this graph, each line represents a set of hyperparameter combinations tested, with the **color intensity indicating the objective value**—the darker the line, the lower the objective value, meaning better performance.  
+
+From this plot, it can be observed that the combination of **Adam optimizer, a learning rate of approximately 5.24e-05, and a dropout rate of 0.5** resulted in the lowest **objective value of 0.1633**, as indicated by the darkest line. Conversely, configurations with **higher objective values**—leading to less optimal performance—tend to have excessively high or low learning rates or use optimizers such as **SGD or RMSProp**, which did not perform as well as **Adam**. The plot also suggests that while **dropout rate** has some influence, it is less significant compared to the optimizer and learning rate. A **dropout rate of 0.5** is more frequently associated with better results.
+
+### Testing Using the Grad-CAM Method
+
+In this experiment, the **Grad-CAM method** was used to analyze how the **EfficientNetV2B2 neural network** predicts the authenticity of **Rupiah banknotes** by highlighting the features the model considers important. The **Grad-CAM technique** generates a **visual heatmap**, indicating the areas of the input image that have the most significant influence on the model's prediction. This provides valuable insights into the **security features** of the banknotes that the model identifies as indicators of authenticity or potential counterfeit suspicion.
+
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/a058c98a-2631-41ba-8b4f-234e5d95c034" />
+  <br>
+  <strong>Heatmap Grad-CAM on original Rupiah banknotes issued in 2016 and 2022</strong>
+</p>
+
+The **Grad-CAM heatmap** in the **image above** visualizes the model’s attention when analyzing **authentic Rupiah banknotes** from the **2016 and 2022 emissions**. Based on the heatmap, the **EfficientNetV2 model** successfully identifies several key security features found on the banknotes, as outlined by **Bank Indonesia (2017)** and further explored in studies by **Limanto & Kusuma (2020)** and **Universitas Kebangsaan Journal (2024).**  
+
+For **2016 emission banknotes**, the heatmap reveals that the model focuses significantly on features such as **the security thread, watermark, money color, color-shifting ink, and microtext**. These areas, marked with higher color intensity, indicate that the model heavily relies on these elements for authenticity recognition. The **security thread and watermark**, in particular, receive greater attention, aligning with expectations since these features are commonly used as primary indicators of genuine banknotes.  
+
+Meanwhile, for **2022 emission banknotes**, the **Grad-CAM heatmap** highlights strong intensity in security features such as **the security thread and hidden image**, which contain the banknote's denomination and emission year. This demonstrates that the model has successfully recognized and utilized the updated security features in the authenticity verification process. The model's focus on these areas suggests that the new security elements have been effectively integrated into the training dataset, enabling it to identify and interpret them accurately.  
+
+Additionally, **Grad-CAM** reveals that the model pays attention to **microprint and color-shifting ink**, which change appearance when viewed from different angles on the **2022 banknotes**. The highlighted regions in the heatmap indicate that the model leverages fine details, which are only visible under magnification or with optical adjustments—important security measures in modern banknotes. This capability allows the model to recognize **not only common and prominent security features** but also **subtle details**, providing an additional layer of security. As a result, the model becomes more reliable in detecting banknote authenticity, even in **complex conditions that may be difficult for the naked eye to verify.**
 
 
 ## 🎯 Conclusion
