@@ -1050,4 +1050,6 @@ To address this, the **audio output** feature in the application provides a **wa
 
 Overall, the **model deployment in the Flutter application** delivered **highly accurate results** in detecting **genuine banknotes** and was **reasonably effective** in identifying **counterfeit notes**. The **high confidence level** in predicting **genuine money** ensures that users, particularly **visually impaired individuals**, can trust the model’s classification when using **authentic banknotes**. On the other hand, while the **confidence level for counterfeit banknotes was relatively lower**, the model still provides an important **cautionary signal** to be careful when handling questionable banknotes. The **low confidence level in counterfeit predictions** suggests that **further model adjustments** may be needed to **enhance sensitivity** to counterfeit indicators **without compromising accuracy** in detecting genuine money.
 
-## 🎯 Conclusion
+## 🎯 Conclusion & Suggestions
+
+### Conclusion
