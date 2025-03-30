@@ -1079,7 +1079,7 @@ Recommendations from the developers for future development and improvement are a
 5. Implementing cross-validation methods to provide a more accurate estimate of model performance by utilizing more data for validation, reducing the risk of overfitting, and increasing model robustness.
 
 <br>
-**Best Regards**,
+**Best Regards**
 **Developer**
 
 **Muhammad Ayyub Ramli**
