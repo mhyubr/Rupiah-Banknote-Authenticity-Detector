@@ -1064,4 +1064,16 @@ Based on the development that has been conducted, the conclusions that can be dr
 
 4. There is a performance difference in identifying Rupiah banknote authenticity after real-time identification through deployment on the Flutter framework. This difference is evident in the increased accuracy and consistency of the model in detecting genuine banknotes, where the model’s confidence level after deployment consistently remained above 90%, indicating that it can accurately identify authentic banknotes with high confidence. Meanwhile, the performance in detecting counterfeit banknotes also showed variations. Although all counterfeit banknotes were correctly identified after deployment, the model’s confidence level in detecting counterfeit money varied, with lower confidence values compared to genuine banknotes. In detail, the deployed model demonstrated excellent capability in detecting genuine banknotes, where all authentic banknote samples ranging from Rp10,000 to Rp100,000 with 2016 and 2022 emissions were correctly identified. The consistently high confidence level, above 90%, for genuine banknotes indicates that the model provides highly accurate results in detecting their authenticity. However, when detecting counterfeit banknotes, although all counterfeit samples were correctly classified, the model’s confidence level in predicting counterfeit money varied and tended to be lower, with the highest confidence reaching only 49.76% on the Rp20,000 banknote (2016 emission). This indicates that the model still has a higher degree of uncertainty in predicting counterfeit money, which may require users, especially visually impaired individuals, to be more cautious when handling banknotes with low confidence levels. This suggests that certain authenticity features of Rupiah banknotes might still be detected in the counterfeit images used for testing. Overall, although the model performs excellently in detecting genuine banknotes, there is still a need to improve its sensitivity to counterfeit money. Such improvements are necessary to ensure the model provides higher and more consistent confidence levels in real-time predictions, helping users, including visually impaired individuals, make safer decisions regarding the authenticity of Rupiah banknotes they receive.
 
+### Suggestion
 
+Recommendations from the developers for future development and improvement are as follows:
+
+1. Expanding and diversifying the dataset to train the model with more samples, enabling it to recognize more complex patterns and improve generalization on new data.
+
+2. Utilizing more appropriate types of transformations in image augmentation to allow the model to better handle variations in data and enhance predictive performance.
+
+3. Using higher-specification devices to facilitate faster model training and enable handling more complex models without performance issues or memory limitations.
+
+4. Conducting more extended hyperparameter tuning processes with various sampling methods and a wider range of parameters to identify the optimal configuration that can improve overall model performance.
+
+5. Implementing cross-validation methods to provide a more accurate estimate of model performance by utilizing more data for validation, reducing the risk of overfitting, and increasing model robustness.
